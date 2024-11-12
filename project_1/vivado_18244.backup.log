@@ -1,0 +1,295 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Nov 12 10:51:23 2024
+# Process ID: 18244
+# Current directory: C:/Users/admin/Desktop/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19612 C:\Users\admin\Desktop\project_1\project_1.xpr
+# Log file: C:/Users/admin/Desktop/project_1/vivado.log
+# Journal file: C:/Users/admin/Desktop/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/admin/Desktop/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/admin/Desktop/multiplier/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Software/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 794.309 ; gain = 152.445
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run bram_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/jtag_axi_0/jtag_axi_0.xci' is already up-to-date
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'bram_0'...
+[Tue Nov 12 11:40:03 2024] Launched bram_0_synth_1, synth_1...
+Run output will be captured here:
+bram_0_synth_1: C:/Users/admin/Desktop/project_1/project_1.runs/bram_0_synth_1/runme.log
+synth_1: C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/runme.log
+[Tue Nov 12 11:40:03 2024] Launched impl_1...
+Run output will be captured here: C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z020clg484-1
+Top: top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1268.313 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'armv4core' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/armv4core.v:1]
+INFO: [Synth 8-6157] synthesizing module 'irq_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/irq_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'irq_ctrl' (1#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/irq_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/pc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'adder32' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/adder32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'adder32' (2#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/adder32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc' (3#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/pc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'registers' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/registers.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'registers' (4#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/registers.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cpsr' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/cpsr.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cpsr' (5#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/cpsr.v:1]
+INFO: [Synth 8-6157] synthesizing module 'forward_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/forward_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'forward_ctrl' (6#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/forward_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hazard_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/hazard_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_ctrl' (7#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/hazard_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mul_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/mul_ctrl.v:1]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter MULL bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'multiplier32' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/multiplier32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'xbip_multadd_0' [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/xbip_multadd_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xbip_multadd_0' (8#1) [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/xbip_multadd_0_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'P' does not match port width (65) of module 'xbip_multadd_0' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/multiplier32.v:24]
+INFO: [Synth 8-6157] synthesizing module 'xbip_multadd_1' [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/xbip_multadd_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xbip_multadd_1' (9#1) [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/xbip_multadd_1_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'P' does not match port width (65) of module 'xbip_multadd_1' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/multiplier32.v:37]
+WARNING: [Synth 8-5788] Register cnt_reg in module multiplier32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/multiplier32.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier32' (10#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/multiplier32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mul_ctrl' (11#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/mul_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'if_id' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/if_id.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'if_id' (12#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/if_id.v:1]
+INFO: [Synth 8-6157] synthesizing module 'id_stage' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/id_stage.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'id_stage' (13#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/id_stage.v:2]
+INFO: [Synth 8-6157] synthesizing module 'id_ex' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/id_ex.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex' (14#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/id_ex.v:1]
+INFO: [Synth 8-6157] synthesizing module 'swp_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/swp_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'swp_ctrl' (15#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/swp_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ldm_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ldm_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'one_detector' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/one_detector.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'one_detector' (16#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/one_detector.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ldm_ctrl' (17#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ldm_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ex_stage' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ex_stage.v:2]
+INFO: [Synth 8-6157] synthesizing module 'shift_unit' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift_unit.v:2]
+INFO: [Synth 8-6157] synthesizing module 'shift' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter SHIFT_TYPE bound to: LSL - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'shift' (18#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shift__parameterized0' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter SHIFT_TYPE bound to: LSR - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'shift__parameterized0' (18#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shift__parameterized1' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter SHIFT_TYPE bound to: ASR - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'shift__parameterized1' (18#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shift__parameterized2' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter SHIFT_TYPE bound to: ROR - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'shift__parameterized2' (18#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'shift_unit' (19#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift_unit.v:2]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/alu.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (20#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/alu.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ex_stage' (21#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ex_stage.v:2]
+INFO: [Synth 8-6157] synthesizing module 'memctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/memctrl.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'memctrl' (22#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/memctrl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ex_wb' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ex_wb.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ex_wb' (23#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ex_wb.v:1]
+INFO: [Synth 8-6157] synthesizing module 'wb_stage' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/wb_stage.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'wb_stage' (24#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/wb_stage.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'armv4core' (25#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/armv4core.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bus' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bridge' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bridge.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bridge' (26#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bridge.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bram_debug' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/bram_debug.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vio_0' [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_0' (27#1) [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'jtag2bram' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/jtag2bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'jtag_axi_0' [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/jtag_axi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'jtag_axi_0' (28#1) [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/jtag_axi_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'axi_bram_ctrl_0' [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/axi_bram_ctrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bram_ctrl_0' (29#1) [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/axi_bram_ctrl_0_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_araddr' does not match port width (14) of module 'axi_bram_ctrl_0' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/jtag2bram.v:57]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_awaddr' does not match port width (14) of module 'axi_bram_ctrl_0' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/jtag2bram.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'jtag2bram' (30#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/jtag2bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BUFGMUX' [D:/Software/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:703]
+	Parameter CLK_SEL_TYPE bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGMUX' (31#1) [D:/Software/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:703]
+INFO: [Synth 8-6157] synthesizing module 'bram_0' [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_0' (32#1) [C:/Users/admin/Desktop/project_1/.Xil/Vivado-18244-DESKTOP-494Q00J/realtime/bram_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/bram_debug.v:22]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'BUFGMUX_inst'. This will prevent further optimization [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/bram_debug.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'bram_debug' (33#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/bram_debug.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart.v:1]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+	Parameter FIFO_DEPTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_fifo' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_fifo.v:1]
+	Parameter FIFO_WIDTH bound to: 8 - type: integer 
+	Parameter FIFO_DEPTH bound to: 8 - type: integer 
+WARNING: [Synth 8-5788] Register buffer_reg in module uart_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-5788] Register o_fifo_rdata_reg in module uart_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_fifo.v:38]
+WARNING: [Synth 8-4767] Trying to implement RAM 'buffer_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "buffer_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'uart_fifo' (34#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_fifo.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_intf' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_intf.v:1]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+	Parameter CNT_MAX bound to: 433 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_intf' (35#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_intf.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'uart_ctrl' (36#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (37#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bus' (38#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (39#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:1]
+WARNING: [Synth 8-3331] design bus has unconnected port i_rom_addr[1]
+WARNING: [Synth 8-3331] design bus has unconnected port i_rom_addr[0]
+WARNING: [Synth 8-3331] design alu has unconnected port i_nzcv[3]
+WARNING: [Synth 8-3331] design alu has unconnected port i_nzcv[2]
+WARNING: [Synth 8-3331] design ex_stage has unconnected port i_mul_lmode
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[27]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[26]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[25]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[24]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[23]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[22]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[21]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[20]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[19]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[18]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[17]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[16]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[15]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[14]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[13]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[12]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[11]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[10]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[9]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[8]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[6]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[5]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[4]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[3]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[2]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[1]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1268.313 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[31] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[30] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[29] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[28] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[27] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[26] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[25] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[24] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[23] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[22] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[21] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[20] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[19] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[18] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[17] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[16] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[15] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[14] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[13] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[12] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[11] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[10] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[9] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[8] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[7] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[6] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[5] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[4] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[3] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[2] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[1] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[0] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:73]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1268.313 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1268.313 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/xbip_multadd_0/xbip_multadd_0.dcp' for cell 'core_0/mul_ctrl_0/multiplier32_0/xbip_multadd_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/xbip_multadd_1/xbip_multadd_1.dcp' for cell 'core_0/mul_ctrl_0/multiplier32_0/xbip_multadd_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/vio_0/vio_0.dcp' for cell 'bus_0/bram_0/vio_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/bram_0/bram_0.dcp' for cell 'bus_0/bram_0/bram_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/jtag_axi_0/jtag_axi_0.dcp' for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0.dcp' for cell 'bus_0/bram_0/jtag2bram_0/axi_bram_ctrl_0'
+INFO: [Netlist 29-17] Analyzing 68 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/jtag_axi_0/constraints/jtag_axi.xdc] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/jtag_axi_0/constraints/jtag_axi.xdc] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'bus_0/bram_0/vio_0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'bus_0/bram_0/vio_0'
+Parsing XDC File [C:/Users/admin/Desktop/project_1/project_1.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [C:/Users/admin/Desktop/project_1/project_1.srcs/constrs_1/new/top.xdc]
+Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Software/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1425.555 ; gain = 0.000
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1425.625 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 49 instances were transformed.
+  BUFGMUX => BUFGCTRL (inverted pins: CE0): 1 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 40 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 8 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 1534.734 ; gain = 266.422
+101 Infos, 72 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 1534.734 ; gain = 266.422
+close_design

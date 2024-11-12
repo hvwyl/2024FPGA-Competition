@@ -1,0 +1,2 @@
+dds_sfix16.vhd,vhdl,xil_defaultlib,../../../../project_1.srcs/sources_1/ip/dds_sfix16/sim/dds_sfix16.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

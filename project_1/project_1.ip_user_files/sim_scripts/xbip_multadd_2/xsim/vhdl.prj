@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/ip/xbip_multadd_2/sim/xbip_multadd_2.vhd" \
+
+nosort

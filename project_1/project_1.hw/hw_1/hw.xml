@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2018.3 (64-bit)                     -->
+<!--                                                              -->
+<!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="2">
+  <device name="xc7a100t_0" gui_info="dashboard1=hw_vios[xc7a100t_0/hw_vio_1=VIO_PROBES_1;]"/>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xc7a100t_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/top.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/top.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/top.bit"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+    <Object name="xc7z020_1" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/top.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/top.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/top.bit"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="bus_0/bram_0/dl" gui_info="hw_vios/hw_vio_1=0"/>
+  </ObjectList>
+  <ObjectList object_type="hw_sysmon" gui_info="">
+    <Object name="XADC" gui_info="hw_vios=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;]"/>
+  </ObjectList>
+  <ObjectList object_type="hw_vio" gui_info="">
+    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	701	Name	0	2147483647	15	238	238	Value	1	2147483647	15	119	119	Activity	2	2147483647	15	106	106	Direction	3	2147483647	15	122	122	VIO	4	2147483647	15	116	116			1	6	1	Name	Value	Activity	Direction	VIO"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="0"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="bus_0/bram_0/dl"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>

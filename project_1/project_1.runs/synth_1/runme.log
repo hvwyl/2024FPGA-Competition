@@ -1,0 +1,1334 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7492 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 408.461 ; gain = 107.004
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:1]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:18]
+INFO: [Synth 8-6157] synthesizing module 'armv4core' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/armv4core.v:1]
+INFO: [Synth 8-6157] synthesizing module 'irq_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/irq_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'irq_ctrl' (1#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/irq_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/pc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'adder32' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/adder32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'adder32' (2#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/adder32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc' (3#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/pc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'registers' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/registers.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'registers' (4#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/registers.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cpsr' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/cpsr.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cpsr' (5#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/cpsr.v:1]
+INFO: [Synth 8-6157] synthesizing module 'forward_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/forward_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'forward_ctrl' (6#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/forward_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hazard_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/hazard_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_ctrl' (7#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/hazard_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mul_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/mul_ctrl.v:1]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter MULL bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'multiplier32' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/multiplier32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'xbip_multadd_0' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/xbip_multadd_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xbip_multadd_0' (8#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/xbip_multadd_0_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'P' does not match port width (65) of module 'xbip_multadd_0' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/multiplier32.v:24]
+INFO: [Synth 8-6157] synthesizing module 'xbip_multadd_1' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/xbip_multadd_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xbip_multadd_1' (9#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/xbip_multadd_1_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'P' does not match port width (65) of module 'xbip_multadd_1' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/multiplier32.v:37]
+WARNING: [Synth 8-5788] Register cnt_reg in module multiplier32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/multiplier32.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier32' (10#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/multiplier32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mul_ctrl' (11#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/mul_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'if_id' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/if_id.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'if_id' (12#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/if_id.v:1]
+INFO: [Synth 8-6157] synthesizing module 'id_stage' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/id_stage.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'id_stage' (13#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/id_stage.v:2]
+INFO: [Synth 8-6157] synthesizing module 'id_ex' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/id_ex.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex' (14#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/id_ex.v:1]
+INFO: [Synth 8-6157] synthesizing module 'swp_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/swp_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'swp_ctrl' (15#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/swp_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ldm_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ldm_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'one_detector' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/one_detector.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'one_detector' (16#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/one_detector.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ldm_ctrl' (17#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ldm_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ex_stage' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ex_stage.v:2]
+INFO: [Synth 8-6157] synthesizing module 'shift_unit' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift_unit.v:2]
+INFO: [Synth 8-6157] synthesizing module 'shift' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter SHIFT_TYPE bound to: LSL - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'shift' (18#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shift__parameterized0' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter SHIFT_TYPE bound to: LSR - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'shift__parameterized0' (18#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shift__parameterized1' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter SHIFT_TYPE bound to: ASR - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'shift__parameterized1' (18#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shift__parameterized2' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter SHIFT_TYPE bound to: ROR - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'shift__parameterized2' (18#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'shift_unit' (19#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/shift_unit.v:2]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/alu.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (20#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/alu.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ex_stage' (21#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ex_stage.v:2]
+INFO: [Synth 8-6157] synthesizing module 'memctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/memctrl.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'memctrl' (22#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/memctrl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ex_wb' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ex_wb.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ex_wb' (23#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/ex_wb.v:1]
+INFO: [Synth 8-6157] synthesizing module 'wb_stage' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/wb_stage.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'wb_stage' (24#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/wb_stage.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'armv4core' (25#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/armv4core/armv4core.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bus' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:1]
+	Parameter S0_AM_MODE bound to: 4'b0000 
+	Parameter S1_DSB_MODE bound to: 4'b0001 
+	Parameter S2_SSB_MODE bound to: 4'b0010 
+	Parameter S3_FM_MODE bound to: 4'b0011 
+	Parameter S4_PM_MODE bound to: 4'b0100 
+	Parameter S5_ASK_MODE bound to: 4'b0101 
+	Parameter S6_BFSK_MODE bound to: 4'b0110 
+	Parameter S7_BPSK_MODE bound to: 4'b0111 
+	Parameter S8_DPSK_MODE bound to: 4'b1000 
+	Parameter S9_QPSK_MODE bound to: 4'b1001 
+	Parameter S10_PDM_MODE bound to: 4'b1010 
+	Parameter S11_PWM_MODE bound to: 4'b1011 
+	Parameter S12_OFF_MODE bound to: 4'b1100 
+INFO: [Synth 8-6157] synthesizing module 'bridge' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bridge.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bridge' (26#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bridge.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bram_debug' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/bram_debug.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vio_0' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_0' (27#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'jtag2bram' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/jtag2bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'jtag_axi_0' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/jtag_axi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'jtag_axi_0' (28#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/jtag_axi_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'axi_bram_ctrl_0' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/axi_bram_ctrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bram_ctrl_0' (29#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/axi_bram_ctrl_0_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_araddr' does not match port width (14) of module 'axi_bram_ctrl_0' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/jtag2bram.v:57]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_awaddr' does not match port width (14) of module 'axi_bram_ctrl_0' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/jtag2bram.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'jtag2bram' (30#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/jtag2bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BUFGMUX' [D:/Software/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:703]
+	Parameter CLK_SEL_TYPE bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGMUX' (31#1) [D:/Software/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:703]
+INFO: [Synth 8-6157] synthesizing module 'bram_0' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_0' (32#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/bram_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/bram_debug.v:22]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'BUFGMUX_inst'. This will prevent further optimization [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/bram_debug.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'bram_debug' (33#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/debug/bram_debug.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart.v:1]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+	Parameter FIFO_DEPTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_fifo' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_fifo.v:1]
+	Parameter FIFO_WIDTH bound to: 8 - type: integer 
+	Parameter FIFO_DEPTH bound to: 8 - type: integer 
+WARNING: [Synth 8-5788] Register buffer_reg in module uart_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-5788] Register o_fifo_rdata_reg in module uart_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_fifo.v:38]
+WARNING: [Synth 8-4767] Trying to implement RAM 'buffer_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "buffer_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'uart_fifo' (34#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_fifo.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_intf' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_intf.v:1]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+	Parameter CNT_MAX bound to: 433 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_intf' (35#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_intf.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_ctrl' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'uart_ctrl' (36#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (37#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bus' (38#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:1]
+INFO: [Synth 8-6157] synthesizing module 'my_SDR_v1' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/my_SDR_v11.v:43]
+	Parameter S0_AM_MODE bound to: 4'b0000 
+	Parameter S1_DSB_MODE bound to: 4'b0001 
+	Parameter S2_SSB_MODE bound to: 4'b0010 
+	Parameter S3_FM_MODE bound to: 4'b0011 
+	Parameter S4_PM_MODE bound to: 4'b0100 
+	Parameter S5_ASK_MODE bound to: 4'b0101 
+	Parameter S6_BFSK_MODE bound to: 4'b0110 
+	Parameter S7_BPSK_MODE bound to: 4'b0111 
+	Parameter S8_DPSK_MODE bound to: 4'b1000 
+	Parameter S9_QPSK_MODE bound to: 4'b1001 
+	Parameter S10_PDM_MODE bound to: 4'b1010 
+	Parameter S11_PWM_MODE bound to: 4'b1011 
+	Parameter S12_OFF_MODE bound to: 4'b1100 
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (39#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Int_Clock_Div' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/Clock/Freq_div.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'Int_Clock_Div' (40#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/Clock/Freq_div.v:44]
+INFO: [Synth 8-6157] synthesizing module 'oddr_0' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/oddr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'oddr_0' (41#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/oddr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fir_compiler_0' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/fir_compiler_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_compiler_0' (42#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/fir_compiler_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'cic_interp_rate4000_1' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/cic_interp_rate4000_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cic_interp_rate4000_1' (43#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/cic_interp_rate4000_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'AM_sfix16' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/AM/AM_sfix16.v:32]
+INFO: [Synth 8-6157] synthesizing module 'dds_sfix16' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/dds_sfix16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dds_sfix16' (44#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/dds_sfix16_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mult_sfix16' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/mult_sfix16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mult_sfix16' (45#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/mult_sfix16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AM_sfix16' (46#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/AM/AM_sfix16.v:32]
+INFO: [Synth 8-6157] synthesizing module 'IQ_synth_fix16' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/IQ/IQ_synth_fix16.v:38]
+INFO: [Synth 8-6157] synthesizing module 'adder_sfix32' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/adder_sfix32_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adder_sfix32' (47#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/adder_sfix32_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'IQ_synth_fix16' (48#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/IQ/IQ_synth_fix16.v:38]
+INFO: [Synth 8-6157] synthesizing module 'FM_fix16' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/FM/FM_fix16.v:41]
+INFO: [Synth 8-6157] synthesizing module 'xbip_multadd_2' [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/xbip_multadd_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xbip_multadd_2' (49#1) [C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/.Xil/Vivado-12544-DESKTOP-494Q00J/realtime/xbip_multadd_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FM_fix16' (50#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/FM/FM_fix16.v:41]
+INFO: [Synth 8-6157] synthesizing module 'diff_code_gen' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/differential_code/diff_code_gen.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'diff_code_gen' (51#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/differential_code/diff_code_gen.v:29]
+INFO: [Synth 8-226] default block is never used [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/my_SDR_v11.v:645]
+INFO: [Synth 8-6157] synthesizing module 'delta_sigma_dac_3rd' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/Signma_Delta_PDM/sigma_delta_modulator.v:100]
+	Parameter W bound to: 16 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element inte2_reg was removed.  [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/Signma_Delta_PDM/sigma_delta_modulator.v:123]
+INFO: [Synth 8-6155] done synthesizing module 'delta_sigma_dac_3rd' (52#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/Signma_Delta_PDM/sigma_delta_modulator.v:100]
+INFO: [Synth 8-6157] synthesizing module 'PWM' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/PWM.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'PWM' (53#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/PWM.v:31]
+WARNING: [Synth 8-3848] Net PDM_out_1bit in module/entity my_SDR_v1 does not have driver. [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/my_SDR_v11.v:677]
+WARNING: [Synth 8-3848] Net PWM_out_1bit in module/entity my_SDR_v1 does not have driver. [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/my_SDR_v11.v:709]
+INFO: [Synth 8-6155] done synthesizing module 'my_SDR_v1' (54#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/my_SDR_v11.v:43]
+WARNING: [Synth 8-350] instance 'sdr' of module 'my_SDR_v1' requires 35 connections, but only 34 given [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:142]
+WARNING: [Synth 8-3848] Net led in module/entity top does not have driver. [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:11]
+WARNING: [Synth 8-3848] Net seg_s in module/entity top does not have driver. [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:12]
+WARNING: [Synth 8-3848] Net seg_ap in module/entity top does not have driver. [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'top' (55#1) [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:1]
+WARNING: [Synth 8-3331] design AM_sfix16 has unconnected port mod_depth[0]
+WARNING: [Synth 8-3331] design AM_sfix16 has unconnected port basebnad_in[0]
+WARNING: [Synth 8-3331] design my_SDR_v1 has unconnected port uart_rxd
+WARNING: [Synth 8-3331] design bus has unconnected port i_rom_addr[1]
+WARNING: [Synth 8-3331] design bus has unconnected port i_rom_addr[0]
+WARNING: [Synth 8-3331] design alu has unconnected port i_nzcv[3]
+WARNING: [Synth 8-3331] design alu has unconnected port i_nzcv[2]
+WARNING: [Synth 8-3331] design ex_stage has unconnected port i_mul_lmode
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[27]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[26]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[25]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[24]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[23]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[22]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[21]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[20]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[19]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[18]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[17]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[16]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[15]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[14]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[13]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[12]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[11]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[10]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[9]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[8]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[6]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[5]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[4]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[3]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[2]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[1]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[0]
+WARNING: [Synth 8-3331] design top has unconnected port led[7]
+WARNING: [Synth 8-3331] design top has unconnected port led[6]
+WARNING: [Synth 8-3331] design top has unconnected port led[5]
+WARNING: [Synth 8-3331] design top has unconnected port led[4]
+WARNING: [Synth 8-3331] design top has unconnected port led[3]
+WARNING: [Synth 8-3331] design top has unconnected port led[2]
+WARNING: [Synth 8-3331] design top has unconnected port led[1]
+WARNING: [Synth 8-3331] design top has unconnected port led[0]
+WARNING: [Synth 8-3331] design top has unconnected port seg_s[3]
+WARNING: [Synth 8-3331] design top has unconnected port seg_s[2]
+WARNING: [Synth 8-3331] design top has unconnected port seg_s[1]
+WARNING: [Synth 8-3331] design top has unconnected port seg_s[0]
+WARNING: [Synth 8-3331] design top has unconnected port seg_ap[7]
+WARNING: [Synth 8-3331] design top has unconnected port seg_ap[6]
+WARNING: [Synth 8-3331] design top has unconnected port seg_ap[5]
+WARNING: [Synth 8-3331] design top has unconnected port seg_ap[4]
+WARNING: [Synth 8-3331] design top has unconnected port seg_ap[3]
+WARNING: [Synth 8-3331] design top has unconnected port seg_ap[2]
+WARNING: [Synth 8-3331] design top has unconnected port seg_ap[1]
+WARNING: [Synth 8-3331] design top has unconnected port seg_ap[0]
+WARNING: [Synth 8-3331] design top has unconnected port ext[38]
+WARNING: [Synth 8-3331] design top has unconnected port ext[37]
+WARNING: [Synth 8-3331] design top has unconnected port ext[36]
+WARNING: [Synth 8-3331] design top has unconnected port ext[35]
+WARNING: [Synth 8-3331] design top has unconnected port ext[34]
+WARNING: [Synth 8-3331] design top has unconnected port ext[33]
+WARNING: [Synth 8-3331] design top has unconnected port ext[32]
+WARNING: [Synth 8-3331] design top has unconnected port ext[31]
+WARNING: [Synth 8-3331] design top has unconnected port ext[30]
+WARNING: [Synth 8-3331] design top has unconnected port ext[29]
+WARNING: [Synth 8-3331] design top has unconnected port ext[28]
+WARNING: [Synth 8-3331] design top has unconnected port ext[27]
+WARNING: [Synth 8-3331] design top has unconnected port ext[26]
+WARNING: [Synth 8-3331] design top has unconnected port ext[25]
+WARNING: [Synth 8-3331] design top has unconnected port ext[24]
+WARNING: [Synth 8-3331] design top has unconnected port ext[23]
+WARNING: [Synth 8-3331] design top has unconnected port ext[22]
+WARNING: [Synth 8-3331] design top has unconnected port ext[21]
+WARNING: [Synth 8-3331] design top has unconnected port ext[20]
+WARNING: [Synth 8-3331] design top has unconnected port ext[19]
+WARNING: [Synth 8-3331] design top has unconnected port ext[18]
+WARNING: [Synth 8-3331] design top has unconnected port ext[17]
+WARNING: [Synth 8-3331] design top has unconnected port ext[16]
+WARNING: [Synth 8-3331] design top has unconnected port ext[15]
+WARNING: [Synth 8-3331] design top has unconnected port ext[14]
+WARNING: [Synth 8-3331] design top has unconnected port ext[13]
+WARNING: [Synth 8-3331] design top has unconnected port ext[12]
+WARNING: [Synth 8-3331] design top has unconnected port ext[11]
+WARNING: [Synth 8-3331] design top has unconnected port ext[10]
+WARNING: [Synth 8-3331] design top has unconnected port ext[9]
+WARNING: [Synth 8-3331] design top has unconnected port key1
+WARNING: [Synth 8-3331] design top has unconnected port key2
+WARNING: [Synth 8-3331] design top has unconnected port key3
+WARNING: [Synth 8-3331] design top has unconnected port key4
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 477.910 ; gain = 176.453
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[31] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[30] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[29] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[28] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[27] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[26] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[25] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[24] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[23] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[22] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[21] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[20] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[19] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[18] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[17] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[16] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[15] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[14] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[13] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[12] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[11] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[10] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[9] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[8] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[7] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[6] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[5] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[4] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[3] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[2] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[1] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+WARNING: [Synth 8-3295] tying undriven pin bram_0:dinb[0] to constant 0 [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/bus.v:93]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 477.910 ; gain = 176.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 477.910 ; gain = 176.453
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tfgg484-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0/axi_bram_ctrl_0_in_context.xdc] for cell 'bus_0/bram_0/jtag2bram_0/axi_bram_ctrl_0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0/axi_bram_ctrl_0_in_context.xdc] for cell 'bus_0/bram_0/jtag2bram_0/axi_bram_ctrl_0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/jtag_axi_0/jtag_axi_0/jtag_axi_0_in_context.xdc] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/jtag_axi_0/jtag_axi_0/jtag_axi_0_in_context.xdc] for cell 'bus_0/bram_0/jtag2bram_0/jtag_axi_0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/xbip_multadd_1/xbip_multadd_1/xbip_multadd_1_in_context.xdc] for cell 'core_0/mul_ctrl_0/multiplier32_0/xbip_multadd_1'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/xbip_multadd_1/xbip_multadd_1/xbip_multadd_1_in_context.xdc] for cell 'core_0/mul_ctrl_0/multiplier32_0/xbip_multadd_1'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'bus_0/bram_0/vio_0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'bus_0/bram_0/vio_0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/bram_0/bram_0/bram_0_in_context.xdc] for cell 'bus_0/bram_0/bram_0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/bram_0/bram_0/bram_0_in_context.xdc] for cell 'bus_0/bram_0/bram_0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/xbip_multadd_0/xbip_multadd_0/xbip_multadd_0_in_context.xdc] for cell 'core_0/mul_ctrl_0/multiplier32_0/xbip_multadd_0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/xbip_multadd_0/xbip_multadd_0/xbip_multadd_0_in_context.xdc] for cell 'core_0/mul_ctrl_0/multiplier32_0/xbip_multadd_0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'sdr/my_SDR_v1_clk_wiz_0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'sdr/my_SDR_v1_clk_wiz_0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/oddr_0/oddr_0/oddr_0_in_context.xdc] for cell 'sdr/oddr_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/oddr_0/oddr_0/oddr_0_in_context.xdc] for cell 'sdr/oddr_u0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/oddr_0/oddr_0/oddr_0_in_context.xdc] for cell 'sdr/oddr_u1'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/oddr_0/oddr_0/oddr_0_in_context.xdc] for cell 'sdr/oddr_u1'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/oddr_0/oddr_0/oddr_0_in_context.xdc] for cell 'sdr/oddr_u2'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/oddr_0/oddr_0/oddr_0_in_context.xdc] for cell 'sdr/oddr_u2'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/oddr_0/oddr_0/oddr_0_in_context.xdc] for cell 'sdr/oddr_u3'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/oddr_0/oddr_0/oddr_0_in_context.xdc] for cell 'sdr/oddr_u3'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/oddr_0/oddr_0/oddr_0_in_context.xdc] for cell 'sdr/oddr_u4'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/oddr_0/oddr_0/oddr_0_in_context.xdc] for cell 'sdr/oddr_u4'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/adder_sfix32/adder_sfix32/adder_sfix32_in_context.xdc] for cell 'sdr/top_iq_synth_u0/adder_sfix32_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/adder_sfix32/adder_sfix32/adder_sfix32_in_context.xdc] for cell 'sdr/top_iq_synth_u0/adder_sfix32_u0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/cic_interp_rate4000_1/cic_interp_rate4000_1/cic_interp_rate4000_1_in_context.xdc] for cell 'sdr/cic_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/cic_interp_rate4000_1/cic_interp_rate4000_1/cic_interp_rate4000_1_in_context.xdc] for cell 'sdr/cic_u0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/cic_interp_rate4000_1/cic_interp_rate4000_1/cic_interp_rate4000_1_in_context.xdc] for cell 'sdr/cic_u1'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/cic_interp_rate4000_1/cic_interp_rate4000_1/cic_interp_rate4000_1_in_context.xdc] for cell 'sdr/cic_u1'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_am_u0/AM_sfix16_dds_sfix16_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_am_u0/AM_sfix16_dds_sfix16_u0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_iq_synth_u0/dds_fix16_u3'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_iq_synth_u0/dds_fix16_u3'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_fm_u0/FM_fix16_DDS_fix16_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_fm_u0/FM_fix16_DDS_fix16_u0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u1'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u1'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u2'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u2'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u3'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u3'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u4'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u4'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u5'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u5'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u6'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/dds_sfix16/dds_sfix16/dds_sfix16_in_context.xdc] for cell 'sdr/top_dds_u6'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'sdr/top_hilbert_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'sdr/top_hilbert_u0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_am_u0/AM_sfix16_mult_gen_0_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_am_u0/AM_sfix16_mult_gen_0_u0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_am_u0/AM_sfix16_mult_gen_0_u1'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_am_u0/AM_sfix16_mult_gen_0_u1'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_iq_synth_u0/mult_sfix16_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_iq_synth_u0/mult_sfix16_u0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_iq_synth_u0/mult_sfix16_u1'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_iq_synth_u0/mult_sfix16_u1'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_mult_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_mult_u0'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_mult_u1'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_mult_u1'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_mult_u2'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/mult_sfix16/mult_sfix16/mult_sfix16_in_context.xdc] for cell 'sdr/top_mult_u2'
+Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/xbip_multadd_2/xbip_multadd_2/xbip_multadd_2_in_context.xdc] for cell 'sdr/top_fm_u0/FM_fix16_xbip_multadd_0_u0'
+Finished Parsing XDC File [c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/xbip_multadd_2/xbip_multadd_2/xbip_multadd_2_in_context.xdc] for cell 'sdr/top_fm_u0/FM_fix16_xbip_multadd_0_u0'
+Parsing XDC File [C:/Users/admin/Desktop/project_1/project_1.srcs/constrs_1/new/top.xdc]
+WARNING: [Constraints 18-619] A clock with name 'gclk' already exists, overwriting the previous clock with the same name. [C:/Users/admin/Desktop/project_1/project_1.srcs/constrs_1/new/top.xdc:6]
+Finished Parsing XDC File [C:/Users/admin/Desktop/project_1/project_1.srcs/constrs_1/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/admin/Desktop/project_1/project_1.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 854.977 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 854.977 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGMUX => BUFGCTRL (inverted pins: CE0): 1 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 854.977 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 854.977 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'bus_0/bram_0/bram_0' at clock pin 'clkb' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/cic_u0' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/cic_u1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_dds_u0' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_dds_u1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_dds_u2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_dds_u3' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_dds_u4' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_dds_u5' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_dds_u6' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'sdr/top_mult_u0' at clock pin 'CLK' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'sdr/top_mult_u1' at clock pin 'CLK' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'sdr/top_mult_u2' at clock pin 'CLK' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_am_u0/AM_sfix16_dds_sfix16_u0' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'sdr/top_am_u0/AM_sfix16_mult_gen_0_u0' at clock pin 'CLK' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'sdr/top_am_u0/AM_sfix16_mult_gen_0_u1' at clock pin 'CLK' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_fm_u0/FM_fix16_DDS_fix16_u0' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_fm_u0/FM_fix16_xbip_multadd_0_u0' at clock pin 'CLK' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_iq_synth_u0/adder_sfix32_u0' at clock pin 'CLK' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'sdr/top_iq_synth_u0/dds_fix16_u3' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'sdr/top_iq_synth_u0/mult_sfix16_u0' at clock pin 'CLK' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'sdr/top_iq_synth_u0/mult_sfix16_u1' at clock pin 'CLK' is different from the actual clock period '5.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 855.320 ; gain = 553.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 855.320 ; gain = 553.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for gclk. (constraint file  c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gclk. (constraint file  c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc, line 6).
+Applied set_property DONT_TOUCH = true for bus_0/bram_0/jtag2bram_0/axi_bram_ctrl_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for bus_0/bram_0/jtag2bram_0/jtag_axi_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for core_0/mul_ctrl_0/multiplier32_0/xbip_multadd_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for bus_0/bram_0/vio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for bus_0/bram_0/bram_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for core_0/mul_ctrl_0/multiplier32_0/xbip_multadd_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/my_SDR_v1_clk_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/oddr_u0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/oddr_u1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/oddr_u2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/oddr_u3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/oddr_u4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_iq_synth_u0/adder_sfix32_u0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/cic_u0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/cic_u1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_am_u0/AM_sfix16_dds_sfix16_u0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_fm_u0/FM_fix16_DDS_fix16_u0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_iq_synth_u0/dds_fix16_u3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_dds_u0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_dds_u1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_dds_u2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_dds_u3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_dds_u4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_dds_u5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_dds_u6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_hilbert_u0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_am_u0/AM_sfix16_mult_gen_0_u0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_am_u0/AM_sfix16_mult_gen_0_u1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_iq_synth_u0/mult_sfix16_u0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_iq_synth_u0/mult_sfix16_u1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_mult_u0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_mult_u1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_mult_u2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sdr/top_fm_u0/FM_fix16_xbip_multadd_0_u0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 855.320 ; gain = 553.863
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "reg_stack_int" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "reg_stack_int" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_vld" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mul_sign" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "imm5_shift_type" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "imm5_shift_type" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "o_opcode" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_mem_size" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ldm_p" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/uart_soc/uart_fifo.v:40]
+INFO: [Synth 8-5544] ROM "tx_reg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_tx_ready" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_rx_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_rx_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "o_MOD_STATE" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s0_arg_AM_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s0_arg_AM_Depth" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s1_arg_DSB_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s2_arg_SSB_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s2_arg_LU_MODE" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s3_arg_FM_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s3_arg_FM_offset" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s4_arg_PM_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s4_arg_PM_offset" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s5_arg_ASK_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s5_arg_ASK_amp" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s6_arg_BFSK_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s6_arg_BFSK_range" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s7_arg_BPSK_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s7_arg_BPSK_range" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s8_arg_DPSK_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s9_arg_QPSK_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/my_SDR_v11.v:522]
+INFO: [Synth 8-5544] ROM "EN_AM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_DSB" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_SSB" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_FM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_PM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_ASK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_BFSK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_BPSK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_DPSK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_QPSK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_PDM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_PWM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'da2_data_sfix16_reg' [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/sdr/my_SDR_v11.v:738]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 855.320 ; gain = 553.863
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   4 Input     32 Bit       Adders := 1     
+	   6 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 4     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
+	   2 Input      3 Bit       Adders := 4     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 65    
+	               16 Bit    Registers := 20    
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 21    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 15    
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 52    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 114   
+	   4 Input     32 Bit        Muxes := 35    
+	  12 Input     32 Bit        Muxes := 1     
+	  13 Input     32 Bit        Muxes := 1     
+	   7 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 8     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 22    
+	  13 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 96    
+	   3 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 3     
+	  11 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module irq_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module adder32 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+Module pc 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module registers 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 30    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 95    
+	   4 Input     32 Bit        Muxes := 30    
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 2     
+Module cpsr 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module forward_ctrl 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 1     
+Module multiplier32 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module mul_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+Module if_id 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module id_stage 
+Detailed RTL Component Info : 
++---Muxes : 
+	  12 Input     32 Bit        Muxes := 1     
+	  13 Input     32 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 9     
+	  13 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	  11 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+Module id_ex 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
+Module swp_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module one_detector 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module ldm_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module shift_unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 3     
+Module alu 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   7 Input     32 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module ex_stage 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module memctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+Module ex_wb 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module wb_stage 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module armv4core 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module bridge 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+Module bram_debug 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module uart_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 9     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+Module uart_intf 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+Module uart_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module bus 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 12    
+	               16 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 18    
+Module Int_Clock_Div 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module AM_sfix16 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module IQ_synth_fix16 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module diff_code_gen 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+Module delta_sigma_dac_3rd 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     32 Bit       Adders := 1     
+	   6 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module PWM 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module my_SDR_v1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 15    
+	               16 Bit    Registers := 15    
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	  14 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "EN_PDM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_PWM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_AM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_DSB" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_SSB" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_FM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_PM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_ASK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_BFSK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_BPSK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_DPSK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EN_QPSK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ldm_p" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "uart_fifo_tx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_tx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_tx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_tx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_tx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_tx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_tx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_tx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_rx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_rx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_rx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_rx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_rx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_rx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_rx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_fifo_rx/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_intf_0/o_rx_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "o_MOD_STATE" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s0_arg_AM_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s0_arg_AM_Depth" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s1_arg_DSB_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s2_arg_SSB_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s2_arg_LU_MODE" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s3_arg_FM_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s3_arg_FM_offset" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s4_arg_PM_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s4_arg_PM_offset" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s5_arg_ASK_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s5_arg_ASK_amp" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s6_arg_BFSK_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s6_arg_BFSK_range" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s7_arg_BPSK_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s7_arg_BPSK_range" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s8_arg_DPSK_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_s9_arg_QPSK_fc" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design bus has unconnected port i_rom_addr[1]
+WARNING: [Synth 8-3331] design bus has unconnected port i_rom_addr[0]
+WARNING: [Synth 8-3331] design ex_stage has unconnected port i_nzcv[3]
+WARNING: [Synth 8-3331] design ex_stage has unconnected port i_nzcv[2]
+WARNING: [Synth 8-3331] design ex_stage has unconnected port i_mul_lmode
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[27]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[26]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[25]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[24]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[23]
+WARNING: [Synth 8-3331] design cpsr has unconnected port i_xpsr_reg[22]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (core_0/\mul_ctrl_0/opcode_reg[3] )
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[0]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[1]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[2]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[3]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[4]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[5]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[6]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[7]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[8]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[9]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[10]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[11]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[12]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[13]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[14]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[15]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[16]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[17]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[18]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[19]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[20]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[21]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[22]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[23]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[24]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[25]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[26]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[27]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sdr/QPSK_data_in_reg[28]' (FD) to 'sdr/QPSK_data_in_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sdr/QPSK_data_in_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sdr/ASK_data_in_reg[15] )
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[2]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[2]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[3]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[3]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[4]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[4]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[5]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[5]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[6]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[6]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[7]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[7]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[8]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[8]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[9]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[9]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[10]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[10]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[11]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[11]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[12]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[12]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PWM_out_16bit_reg[13]' (FDS) to 'sdr/PWM_out_16bit_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sdr/PDM_out_16bit_reg[13]' (FDS) to 'sdr/PDM_out_16bit_reg[14]'
+WARNING: [Synth 8-3332] Sequential element (sdr/da2_data_sfix16_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (sdr/da2_data_sfix16_reg[0]) is unused and will be removed from module top.
+INFO: [Synth 8-3886] merging instance 'i_14/sdr/top_pwm_u0/cnt_reg[13]' (FDC) to 'i_14/sdr/top_pwm_u0/cnt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_14/sdr/top_pwm_u0/cnt_reg[15]' (FDC) to 'i_14/sdr/top_pwm_u0/cnt_reg[14]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_14/\sdr/top_pwm_u0/cnt_reg[14] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 890.289 ; gain = 588.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'bus_0/bram_0/jtag2bram_0/axi_bram_ctrl_0/bram_clk_a' to pin 'bus_0/bram_0/jtag2bram_0/axi_bram_ctrl_0/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sdr/my_SDR_v1_clk_wiz_0/clk_out1' to pin 'sdr/my_SDR_v1_clk_wiz_0/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sdr/my_SDR_v1_clk_wiz_0/clk_out2' to pin 'sdr/my_SDR_v1_clk_wiz_0/bbstub_clk_out2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sdr/my_SDR_v1_clk_wiz_0/clk_out3' to pin 'sdr/my_SDR_v1_clk_wiz_0/bbstub_clk_out3/O'
+WARNING: [Synth 8-565] redefining clock 'gclk'
+INFO: [Synth 8-5819] Moved 4 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 890.289 ; gain = 588.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 890.289 ; gain = 588.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sdr/PWM_out_16bit_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sdr/PDM_out_16bit_reg[14] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sdr/PWM_out_16bit_reg[15] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sdr/PDM_out_16bit_reg[15] )
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1075.277 ; gain = 773.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[31] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[30] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[29] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[28] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[27] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[26] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[25] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[24] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[23] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[22] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[21] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[20] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[19] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[18] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin bus_0/bram_0:dinb[0] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1075.277 ; gain = 773.820
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1075.277 ; gain = 773.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 1075.277 ; gain = 773.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 1075.277 ; gain = 773.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1075.277 ; gain = 773.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1075.277 ; gain = 773.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------+----------+
+|      |BlackBox name         |Instances |
++------+----------------------+----------+
+|1     |vio_0                 |         1|
+|2     |bram_0                |         1|
+|3     |jtag_axi_0            |         1|
+|4     |axi_bram_ctrl_0       |         1|
+|5     |xbip_multadd_0        |         1|
+|6     |xbip_multadd_1        |         1|
+|7     |clk_wiz_1             |         1|
+|8     |oddr_0                |         5|
+|9     |fir_compiler_0        |         1|
+|10    |cic_interp_rate4000_1 |         2|
+|11    |dds_sfix16            |        10|
+|12    |mult_sfix16           |         7|
+|13    |xbip_multadd_2        |         1|
+|14    |adder_sfix32          |         1|
++------+----------------------+----------+
+
+Report Cell Usage: 
++------+-------------------------+------+
+|      |Cell                     |Count |
++------+-------------------------+------+
+|1     |adder_sfix32             |     1|
+|2     |axi_bram_ctrl_0          |     1|
+|3     |bram_0                   |     1|
+|4     |cic_interp_rate4000_1    |     1|
+|5     |cic_interp_rate4000_1__2 |     1|
+|6     |clk_wiz_1                |     1|
+|7     |dds_sfix16               |     1|
+|8     |dds_sfix16__10           |     1|
+|9     |dds_sfix16__11           |     1|
+|10    |dds_sfix16__12           |     1|
+|11    |dds_sfix16__13           |     1|
+|12    |dds_sfix16__14           |     1|
+|13    |dds_sfix16__15           |     1|
+|14    |dds_sfix16__16           |     1|
+|15    |dds_sfix16__17           |     1|
+|16    |dds_sfix16__18           |     1|
+|17    |fir_compiler_0           |     1|
+|18    |jtag_axi_0               |     1|
+|19    |mult_sfix16              |     1|
+|20    |mult_sfix16__10          |     1|
+|21    |mult_sfix16__11          |     1|
+|22    |mult_sfix16__12          |     1|
+|23    |mult_sfix16__7           |     1|
+|24    |mult_sfix16__8           |     1|
+|25    |mult_sfix16__9           |     1|
+|26    |oddr_0                   |     1|
+|27    |oddr_0__1                |     1|
+|28    |oddr_0__2                |     1|
+|29    |oddr_0__3                |     1|
+|30    |oddr_0__4                |     1|
+|31    |vio_0                    |     1|
+|32    |xbip_multadd_0           |     1|
+|33    |xbip_multadd_1           |     1|
+|34    |xbip_multadd_2           |     1|
+|35    |BUFG                     |    12|
+|36    |BUFGMUX                  |     1|
+|37    |CARRY4                   |    69|
+|38    |LUT1                     |    21|
+|39    |LUT2                     |   267|
+|40    |LUT3                     |   785|
+|41    |LUT4                     |   389|
+|42    |LUT5                     |  1065|
+|43    |LUT6                     |  1881|
+|44    |MUXF7                    |   167|
+|45    |MUXF8                    |    27|
+|46    |FDCE                     |  1936|
+|47    |FDPE                     |    10|
+|48    |FDRE                     |   848|
+|49    |FDSE                     |    15|
+|50    |LD                       |    14|
+|51    |IBUF                     |    16|
+|52    |OBUF                     |    36|
+|53    |OBUFT                    |    20|
++------+-------------------------+------+
+
+Report Instance Areas: 
++------+---------------------+--------------------+------+
+|      |Instance             |Module              |Cells |
++------+---------------------+--------------------+------+
+|1     |top                  |                    |  9152|
+|2     |  bus_0              |bus                 |  1681|
+|3     |    bram_0           |bram_debug          |   320|
+|4     |      jtag2bram_0    |jtag2bram           |   254|
+|5     |    bridge_0         |bridge              |   355|
+|6     |    uart_0           |uart                |   355|
+|7     |      uart_ctrl_0    |uart_ctrl           |     4|
+|8     |      uart_fifo_rx   |uart_fifo           |   129|
+|9     |      uart_fifo_tx   |uart_fifo_0         |   143|
+|10    |      uart_intf_0    |uart_intf           |    79|
+|11    |  core_0             |armv4core           |  4989|
+|12    |    cpsr_0           |cpsr                |    14|
+|13    |    ex_wb_0          |ex_wb               |   102|
+|14    |    id_ex_0          |id_ex               |  1976|
+|15    |    if_id_0          |if_id               |     2|
+|16    |    irq_ctrl_0       |irq_ctrl            |     5|
+|17    |    ldm_ctrl_0       |ldm_ctrl            |   106|
+|18    |    memctrl_0        |memctrl             |    70|
+|19    |    mul_ctrl_0       |mul_ctrl            |   438|
+|20    |      multiplier32_0 |multiplier32        |   430|
+|21    |    pc_0             |pc                  |    43|
+|22    |      adder32_0      |adder32             |     8|
+|23    |    registers_0      |registers           |  2232|
+|24    |    swp_ctrl_0       |swp_ctrl            |     1|
+|25    |  sdr                |my_SDR_v1           |  2397|
+|26    |    clk_div_u1       |Int_Clock_Div       |    53|
+|27    |    top_D_S_u0       |delta_sigma_dac_3rd |   270|
+|28    |    top_am_u0        |AM_sfix16           |   133|
+|29    |    top_diff_code_u0 |diff_code_gen       |     2|
+|30    |    top_fm_u0        |FM_fix16            |   203|
+|31    |    top_iq_synth_u0  |IQ_synth_fix16      |   195|
+|32    |    top_pwm_u0       |PWM                 |    51|
++------+---------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1075.277 ; gain = 773.820
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 122 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 1075.277 ; gain = 396.410
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1075.277 ; gain = 773.820
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 278 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1075.277 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 15 instances were transformed.
+  BUFGMUX => BUFGCTRL (inverted pins: CE0): 1 instances
+  LD => LDCE: 14 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+296 Infos, 206 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 1075.277 ; gain = 785.641
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1075.277 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 12 16:48:34 2024...

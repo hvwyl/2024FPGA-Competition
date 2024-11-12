@@ -1,0 +1,2 @@
+cic_interp_rate4000_1.vhd,vhdl,xil_defaultlib,../../../../project_1.srcs/sources_1/ip/cic_interp_rate4000_1/sim/cic_interp_rate4000_1.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

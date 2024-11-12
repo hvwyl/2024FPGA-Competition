@@ -1,0 +1,711 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Nov 12 15:23:02 2024
+# Process ID: 7124
+# Current directory: C:/Users/admin/Desktop/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9576 C:\Users\admin\Desktop\project_1\project_1.xpr
+# Log file: C:/Users/admin/Desktop/project_1/vivado.log
+# Journal file: C:/Users/admin/Desktop/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/admin/Desktop/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Software/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 773.031 ; gain = 117.254
+update_compile_order -fileset sources_1
+set_property part xc7a100tfgg484-2 [current_project]
+WARNING: [IP_Flow 19-2162] IP 'axi_bram_ctrl_0' is locked:
+* Current project part 'xc7a100tfgg484-2' and the part 'xc7z020clg484-1' used to customize the IP 'axi_bram_ctrl_0' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'jtag_axi_0' is locked:
+* Current project part 'xc7a100tfgg484-2' and the part 'xc7z020clg484-1' used to customize the IP 'jtag_axi_0' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'bram_0' is locked:
+* Current project part 'xc7a100tfgg484-2' and the part 'xc7z020clg484-1' used to customize the IP 'bram_0' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'vio_0' is locked:
+* Current project part 'xc7a100tfgg484-2' and the part 'xc7z020clg484-1' used to customize the IP 'vio_0' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'xbip_multadd_0' is locked:
+* Current project part 'xc7a100tfgg484-2' and the part 'xc7z020clg484-1' used to customize the IP 'xbip_multadd_0' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'xbip_multadd_1' is locked:
+* Current project part 'xc7a100tfgg484-2' and the part 'xc7z020clg484-1' used to customize the IP 'xbip_multadd_1' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 -dir c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip
+set_property -dict [list CONFIG.PRIMARY_PORT {gclk} CONFIG.CLK_OUT1_PORT {clk_50m} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} CONFIG.CLKOUT1_JITTER {151.636}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+generate_target all [get_files  c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs -jobs 16 clk_wiz_0_synth_1
+[Tue Nov 12 15:25:34 2024] Launched clk_wiz_0_synth_1...
+Run output will be captured here: C:/Users/admin/Desktop/project_1/project_1.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory C:/Users/admin/Desktop/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/admin/Desktop/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/admin/Desktop/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -srcset vio_0 -vlnv xilinx.com:ip:vio:3.0 [get_ips  vio_0] -log ip_upgrade.log
+Upgrading 'vio_0'
+INFO: [Project 1-386] Moving file 'C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/vio_0/vio_0.xci' from fileset 'vio_0' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3420] Updated vio_0 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'vio_0'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/admin/Desktop/project_1/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips vio_0] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+upgrade_ip -srcset bram_0 -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  bram_0] -log ip_upgrade.log
+Upgrading 'bram_0'
+INFO: [Project 1-386] Moving file 'C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/bram_0/bram_0.xci' from fileset 'bram_0' to fileset 'sources_1'.
+INFO: [Device 21-403] Loading part xc7a100tfgg484-2
+INFO: [IP_Flow 19-3420] Updated bram_0 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'bram_0'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/admin/Desktop/project_1/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips bram_0] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+upgrade_ip [get_ips  {jtag_axi_0 axi_bram_ctrl_0}] -log ip_upgrade.log
+Upgrading 'axi_bram_ctrl_0'
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] axi_bram_ctrl_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] axi_bram_ctrl_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] axi_bram_ctrl_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] axi_bram_ctrl_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [IP_Flow 19-3420] Updated axi_bram_ctrl_0 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'axi_bram_ctrl_0'...
+Upgrading 'jtag_axi_0'
+INFO: [IP_Flow 19-3420] Updated jtag_axi_0 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'jtag_axi_0'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/admin/Desktop/project_1/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {jtag_axi_0 axi_bram_ctrl_0}] -no_script -sync -force -quiet
+generate_target all [get_files  {C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0.xci C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/jtag_axi_0/jtag_axi_0.xci}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'axi_bram_ctrl_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'axi_bram_ctrl_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'axi_bram_ctrl_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'jtag_axi_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'jtag_axi_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'jtag_axi_0'...
+catch { config_ip_cache -export [get_ips -all axi_bram_ctrl_0] }
+catch { config_ip_cache -export [get_ips -all jtag_axi_0] }
+export_ip_user_files -of_objects [get_files C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0.xci] -no_script -sync -force -quiet
+export_ip_user_files -of_objects [get_files C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/jtag_axi_0/jtag_axi_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/jtag_axi_0/jtag_axi_0.xci]
+launch_runs -jobs 16 {axi_bram_ctrl_0_synth_1 jtag_axi_0_synth_1}
+[Tue Nov 12 15:26:55 2024] Launched axi_bram_ctrl_0_synth_1, jtag_axi_0_synth_1...
+Run output will be captured here:
+axi_bram_ctrl_0_synth_1: C:/Users/admin/Desktop/project_1/project_1.runs/axi_bram_ctrl_0_synth_1/runme.log
+jtag_axi_0_synth_1: C:/Users/admin/Desktop/project_1/project_1.runs/jtag_axi_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0.xci] -directory C:/Users/admin/Desktop/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/admin/Desktop/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/admin/Desktop/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_simulation -of_objects [get_files C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/jtag_axi_0/jtag_axi_0.xci] -directory C:/Users/admin/Desktop/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/admin/Desktop/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/admin/Desktop/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/admin/Desktop/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -srcset xbip_multadd_0 [get_ips  {xbip_multadd_0 xbip_multadd_1}] -log ip_upgrade.log
+Upgrading 'xbip_multadd_0'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/admin/Desktop/project_1/project_1.runs/xbip_multadd_0_synth_1
+
+INFO: [Project 1-386] Moving file 'C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/xbip_multadd_0/xbip_multadd_0.xci' from fileset 'xbip_multadd_0' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3420] Updated xbip_multadd_0 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xbip_multadd_0'...
+Upgrading 'xbip_multadd_1'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/admin/Desktop/project_1/project_1.runs/xbip_multadd_1_synth_1
+
+INFO: [Project 1-386] Moving file 'C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/xbip_multadd_1/xbip_multadd_1.xci' from fileset 'xbip_multadd_1' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3420] Updated xbip_multadd_1 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xbip_multadd_1'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/admin/Desktop/project_1/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {xbip_multadd_0 xbip_multadd_1}] -no_script -sync -force -quiet
+can't read "c_xdevicefamily": no such variable
+can't read "c_xdevicefamily": no such variable
+can't read "c_xdevicefamily": no such variable
+can't read "c_xdevicefamily": no such variable
+can't read "c_xdevicefamily": no such variable
+can't read "c_xdevicefamily": no such variable
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/admin/Desktop/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'bram_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'vio_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xbip_multadd_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xbip_multadd_0'...
+[Tue Nov 12 15:28:30 2024] Launched jtag_axi_0_synth_1, xbip_multadd_1_synth_1, vio_0_synth_1, bram_0_synth_1, xbip_multadd_0_synth_1, synth_1...
+Run output will be captured here:
+jtag_axi_0_synth_1: C:/Users/admin/Desktop/project_1/project_1.runs/jtag_axi_0_synth_1/runme.log
+xbip_multadd_1_synth_1: C:/Users/admin/Desktop/project_1/project_1.runs/xbip_multadd_1_synth_1/runme.log
+vio_0_synth_1: C:/Users/admin/Desktop/project_1/project_1.runs/vio_0_synth_1/runme.log
+bram_0_synth_1: C:/Users/admin/Desktop/project_1/project_1.runs/bram_0_synth_1/runme.log
+xbip_multadd_0_synth_1: C:/Users/admin/Desktop/project_1/project_1.runs/xbip_multadd_0_synth_1/runme.log
+synth_1: C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/runme.log
+[Tue Nov 12 15:28:31 2024] Launched impl_1...
+Run output will be captured here: C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/E4047BA9F271
+set_property PROGRAM.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'bus_0/bram_0/vio_0' at location 'uuid_64A2EA46900258029964F97157010C8A' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 JTAG AXI core(s).
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/E4047BA9F271
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/E4047BA9F271
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/E4047BA9F271
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/E4047BA9F271
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 JTAG AXI core(s).
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+set_property OUTPUT_VALUE 1 [get_hw_probes bus_0/bram_0/dl -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"bus_0/bram_0/vio_0"}]]
+commit_hw_vio [get_hw_probes {bus_0/bram_0/dl} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"bus_0/bram_0/vio_0"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes bus_0/bram_0/dl -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"bus_0/bram_0/vio_0"}]]
+commit_hw_vio [get_hw_probes {bus_0/bram_0/dl} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"bus_0/bram_0/vio_0"}]]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Nov 12 15:38:03 2024] Launched synth_1...
+Run output will be captured here: C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/runme.log
+[Tue Nov 12 15:38:03 2024] Launched impl_1...
+Run output will be captured here: C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/E4047BA9F271
+set_property PROGRAM.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 JTAG AXI core(s).
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+set_property PROBES.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 JTAG AXI core(s).
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+source C:/Users/admin/Desktop/project_1/arm/flashscript.tcl
+# set_property OUTPUT_VALUE 1 [get_hw_probes bus_0/bram_0/dl]
+# commit_hw_vio [get_hw_probes {bus_0/bram_0/dl}]
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000000 -data EA000000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: EA000000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000004 -data EA00000D -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: EA00000D
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000008 -data E59F003C -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E59F003C
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000000c -data E59F103C -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E59F103C
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000010 -data E3A02000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E3A02000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000014 -data EA000000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: EA000000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000018 -data E8A00004 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E8A00004
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000001c -data E1500001 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1500001
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000020 -data 1AFFFFFC -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: 1AFFFFFC
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000024 -data E59FD028 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E59FD028
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000028 -data E1A0B00D -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A0B00D
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000002c -data E10F0000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E10F0000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000030 -data E3C00080 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E3C00080
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000034 -data E129F000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E129F000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000038 -data EB000088 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: EB000088
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000003c -data EAFFFFFE -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: EAFFFFFE
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000040 -data E92D4000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E92D4000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000044 -data EB000063 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: EB000063
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000048 -data E8FD8000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E8FD8000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000004c -data 000002DC -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: 000002DC
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000050 -data 000002DC -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: 000002DC
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000054 -data 00004000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: 00004000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000058 -data E52DB004 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E52DB004
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000005c -data E28DB000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E28DB000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000060 -data E24DD01C -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E24DD01C
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000064 -data E50B0010 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B0010
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000068 -data E50B1014 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B1014
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000006c -data E50B2018 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B2018
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000070 -data E51B2014 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B2014
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000074 -data E51B3018 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3018
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000078 -data E0823003 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E0823003
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000007c -data E50B300C -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B300C
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000080 -data E51B3014 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3014
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000084 -data E50B3008 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B3008
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000088 -data EA00000E -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: EA00000E
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000008c -data E1A00000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A00000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000090 -data E51B3010 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3010
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000094 -data E5933004 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E5933004
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000098 -data E1A03803 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A03803
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000009c -data E1A03823 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A03823
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000a0 -data E3530000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E3530000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000a4 -data 1AFFFFF9 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: 1AFFFFF9
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000a8 -data E51B3008 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3008
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000ac -data E5D33000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E5D33000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000b0 -data E1A02003 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A02003
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000b4 -data E51B3010 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3010
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000b8 -data E5832000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E5832000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000bc -data E51B3008 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3008
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000c0 -data E2833001 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E2833001
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000c4 -data E50B3008 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B3008
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000c8 -data E51B2008 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B2008
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000cc -data E51B300C -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B300C
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000d0 -data E1520003 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1520003
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000d4 -data 1AFFFFEC -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: 1AFFFFEC
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000d8 -data E1A00000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A00000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000dc -data E1A00000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A00000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000e0 -data E28BD000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E28BD000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000e4 -data E49DB004 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E49DB004
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000e8 -data E1A0F00E -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A0F00E
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000ec -data E52DB004 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E52DB004
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000f0 -data E28DB000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E28DB000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000f4 -data E24DD01C -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E24DD01C
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000f8 -data E50B0010 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B0010
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000000fc -data E50B1014 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B1014
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000100 -data E50B2018 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B2018
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000104 -data E51B2014 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B2014
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000108 -data E51B3018 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3018
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000010c -data E0823003 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E0823003
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000110 -data E50B300C -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B300C
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000114 -data E51B3014 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3014
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000118 -data E50B3008 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B3008
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000011c -data EA00000F -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: EA00000F
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000120 -data E1A00000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A00000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000124 -data E51B3010 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3010
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000128 -data E5933004 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E5933004
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000012c -data E1A03823 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A03823
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000130 -data E1A03803 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A03803
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000134 -data E1A03823 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A03823
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000138 -data E3530000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E3530000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000013c -data 1AFFFFF8 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: 1AFFFFF8
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000140 -data E51B3010 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3010
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000144 -data E5933000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E5933000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000148 -data E20320FF -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E20320FF
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000014c -data E51B3008 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3008
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000150 -data E5C32000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E5C32000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000154 -data E51B3008 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B3008
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000158 -data E2833001 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E2833001
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000015c -data E50B3008 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E50B3008
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000160 -data E51B2008 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B2008
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000164 -data E51B300C -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E51B300C
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000168 -data E1520003 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1520003
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000016c -data 1AFFFFEB -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: 1AFFFFEB
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000170 -data E1A00000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A00000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000174 -data E1A00000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A00000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000178 -data E28BD000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E28BD000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000017c -data E49DB004 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E49DB004
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000180 -data E1A0F00E -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E1A0F00E
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000184 -data E52DB004 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E52DB004
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000188 -data E28DB000 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E28DB000
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000018c -data E24DD014 -type write -force
+# run_hw_axi wr_txn_lite
+INFO: [Labtoolstcl 44-481] WRITE DATA is: E24DD014
+INFO: [Common 17-14] Message 'Labtoolstcl 44-481' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000190 -data E50B0010 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000194 -data E51B3010 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000198 -data E50B3008 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000019c -data E1A00000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001a0 -data E51B3008 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001a4 -data E2832001 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001a8 -data E50B2008 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001ac -data E5D33000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001b0 -data E3530000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001b4 -data 1AFFFFF9 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001b8 -data E51B2008 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001bc -data E51B3010 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001c0 -data E0423003 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001c4 -data E2433001 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001c8 -data E1A00003 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001cc -data E28BD000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001d0 -data E49DB004 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001d4 -data E1A0F00E -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001d8 -data E92D4800 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001dc -data E28DB004 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001e0 -data E24DD010 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001e4 -data E50B0010 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001e8 -data EA000003 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001ec -data E3A03901 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001f0 -data E5933000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001f4 -data E20330FF -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001f8 -data E54B3005 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000001fc -data E3A03901 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000200 -data E5933004 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000204 -data E1A03823 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000208 -data E1A03803 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000020c -data E1A03823 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000210 -data E3530000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000214 -data 0AFFFFF4 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000218 -data E3A02003 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000021c -data E59F1034 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000220 -data E3A00901 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000224 -data EBFFFF8B -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000228 -data E24B3005 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000022c -data E3A02001 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000230 -data E1A01003 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000234 -data E3A00901 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000238 -data EBFFFF86 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000023c -data E3A02003 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000240 -data E59F1014 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000244 -data E3A00901 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000248 -data EBFFFF82 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000024c -data E1A00000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000250 -data E24BD004 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000254 -data E8BD8800 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000258 -data 000002C0 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000025c -data 000002C4 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000260 -data E92D4800 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000264 -data E28DB004 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000268 -data E24DD008 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000026c -data E59F3044 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000270 -data E50B300C -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000274 -data E51B000C -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000278 -data EBFFFFC1 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000027c -data E1A03000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000280 -data E1A02003 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000284 -data E51B100C -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000288 -data E3A00901 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000028c -data EBFFFF71 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000290 -data E59F3024 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000294 -data E50B3008 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 00000298 -data EA000000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 0000029c -data E1A00000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002a0 -data E51B3008 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002a4 -data E2432001 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002a8 -data E50B2008 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002ac -data E3530000 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002b0 -data 1AFFFFF9 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002b4 -data EAFFFFEE -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002b8 -data 000002C8 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002bc -data 00989680 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002c0 -data 003C4945 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002c4 -data 0049513E -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002c8 -data 6C6C6568 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002cc -data 6F77206F -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002d0 -data 21646C72 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002d4 -data 73657420 -type write -force
+# run_hw_axi wr_txn_lite
+# create_hw_axi_txn wr_txn_lite [get_hw_axis hw_axi_1] -address 000002d8 -data FFFF0074 -type write -force
+# run_hw_axi wr_txn_lite
+# set_property OUTPUT_VALUE 0 [get_hw_probes bus_0/bram_0/dl]
+# commit_hw_vio [get_hw_probes {bus_0/bram_0/dl}]
+close_hw
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 12 15:43:31 2024...

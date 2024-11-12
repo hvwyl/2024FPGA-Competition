@@ -1,0 +1,793 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Nov 12 16:51:23 2024
+| Host         : DESKTOP-494Q00J running 64-bit major release  (build 9200)
+| Command      : report_clock_utilization -file top_clock_utilization_routed.rpt
+| Design       : top
+| Device       : 7a100t-fgg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Global Clock Resources
+3. Global Clock Source Details
+4. Local Clock Details
+5. Clock Regions: Key Resource Utilization
+6. Clock Regions : Global Clock Summary
+7. Device Cell Placement Summary for Global Clock g0
+8. Device Cell Placement Summary for Global Clock g1
+9. Device Cell Placement Summary for Global Clock g2
+10. Device Cell Placement Summary for Global Clock g3
+11. Device Cell Placement Summary for Global Clock g4
+12. Device Cell Placement Summary for Global Clock g5
+13. Device Cell Placement Summary for Global Clock g6
+14. Device Cell Placement Summary for Global Clock g7
+15. Device Cell Placement Summary for Global Clock g8
+16. Device Cell Placement Summary for Global Clock g9
+17. Device Cell Placement Summary for Global Clock g10
+18. Device Cell Placement Summary for Global Clock g11
+19. Device Cell Placement Summary for Global Clock g12
+20. Device Cell Placement Summary for Global Clock g13
+21. Device Cell Placement Summary for Global Clock g14
+22. Device Cell Placement Summary for Global Clock g15
+23. Device Cell Placement Summary for Global Clock g16
+24. Clock Region Cell Placement per Global Clock: Region X0Y0
+25. Clock Region Cell Placement per Global Clock: Region X1Y0
+26. Clock Region Cell Placement per Global Clock: Region X0Y1
+27. Clock Region Cell Placement per Global Clock: Region X1Y1
+28. Clock Region Cell Placement per Global Clock: Region X1Y2
+
+1. Clock Primitive Utilization
+------------------------------
+
++----------+------+-----------+-----+--------------+--------+
+| Type     | Used | Available | LOC | Clock Region | Pblock |
++----------+------+-----------+-----+--------------+--------+
+| BUFGCTRL |   17 |        32 |   0 |            0 |      0 |
+| BUFH     |    0 |        96 |   0 |            0 |      0 |
+| BUFIO    |    0 |        24 |   0 |            0 |      0 |
+| BUFMR    |    0 |        12 |   0 |            0 |      0 |
+| BUFR     |    0 |        24 |   0 |            0 |      0 |
+| MMCM     |    1 |         6 |   0 |            0 |      0 |
+| PLL      |    0 |         6 |   0 |            0 |      0 |
++----------+------+-----------+-----+--------------+--------+
+
+
+2. Global Clock Resources
+-------------------------
+
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------------------------------------------+
+| Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                                                      | Driver Pin                                                           | Net                                                 |
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------------------------------------------+
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 5 |        4531 |               1 |       20.000 | clk_out3_clk_wiz_1                                                                         | sdr/my_SDR_v1_clk_wiz_0/inst/clkout3_buf/O                           | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3               |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 1 |         465 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i              |
+| g2        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |         446 |              11 |        5.000 | clk_out1_clk_wiz_1                                                                         | sdr/my_SDR_v1_clk_wiz_0/inst/clkout1_buf/O                           | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1               |
+| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |                 1 |         303 |               0 |        5.000 | clk_out1_clk_wiz_1                                                                         | top_mult_u1_i_1/O                                                    | PM_clk                                              |
+| g4        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y5  | n/a          |                 2 |         302 |               0 |        5.000 | clk_out1_clk_wiz_1                                                                         | top_dds_u4_i_1/O                                                     | BPSK_clk                                            |
+| g5        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y6  | n/a          |                 1 |         295 |               0 |        5.000 | clk_out1_clk_wiz_1                                                                         | dds_fix16_u3_i_1/O                                                   | SSB_clk                                             |
+| g6        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y7  | n/a          |                 2 |         271 |               0 |        5.000 | clk_out1_clk_wiz_1                                                                         | FM_fix16_xbip_multadd_0_u0_i_1/O                                     | FM_clk                                              |
+| g7        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y8  | n/a          |                 2 |         269 |               0 |        5.000 | clk_out1_clk_wiz_1                                                                         | top_dds_u3_i_1/O                                                     | BFSK_clk                                            |
+| g8        | src7      | BUFG/O          | None       | BUFGCTRL_X0Y9  | n/a          |                 1 |         240 |               0 |        5.000 | clk_out1_clk_wiz_1                                                                         | top_dds_u6_i_1/O                                                     | QPSK_clk                                            |
+| g9        | src8      | BUFG/O          | None       | BUFGCTRL_X0Y10 | n/a          |                 1 |         239 |               0 |        5.000 | clk_out1_clk_wiz_1                                                                         | top_dds_u5_i_1/O                                                     | DPSK_clk                                            |
+| g10       | src9      | BUFG/O          | None       | BUFGCTRL_X0Y12 | n/a          |                 1 |         228 |               0 |        5.000 | clk_out1_clk_wiz_1                                                                         | top_dds_u2_i_1/O                                                     | ASK_clk                                             |
+| g11       | src10     | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 1 |         216 |               0 |        5.000 | clk_out1_clk_wiz_1                                                                         | AM_sfix16_dds_sfix16_u0_i_1/O                                        | AM_clk                                              |
+| g12       | src11     | BUFG/O          | None       | BUFGCTRL_X0Y11 | n/a          |                 1 |         215 |               0 |        5.000 | clk_out1_clk_wiz_1                                                                         | top_dds_u0_i_1/O                                                     | DSB_clk                                             |
+| g13       | src12     | BUFG/O          | None       | BUFGCTRL_X0Y13 | n/a          |                 1 |          82 |               0 |       20.000 | clk_out3_clk_wiz_1                                                                         | PDM_in_reg[15]_i_1/O                                                 | PDM_clk                                             |
+| g14       | src13     | BUFG/O          | None       | BUFGCTRL_X0Y14 | n/a          |                 1 |          82 |               0 |              |                                                                                            | digit_baseband_sclk_r2_BUFG_inst/O                                   | digit_baseband_sclk_r2_BUFG                         |
+| g15       | src14     | BUFGCTRL/O      | None       | BUFGCTRL_X0Y2  | n/a          |                 1 |           4 |               0 |       20.000 | clk_out3_clk_wiz_1                                                                         | bus_0/bram_0/BUFGMUX_inst/O                                          | bus_0/bram_0/clkb_muxed                             |
+| g16       | src0      | BUFG/O          | None       | BUFGCTRL_X0Y15 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_clk_wiz_1                                                                         | sdr/my_SDR_v1_clk_wiz_0/inst/clkf_buf/O                              | sdr/my_SDR_v1_clk_wiz_0/inst/clkfbout_buf_clk_wiz_1 |
++-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+3. Global Clock Source Details
+------------------------------
+
++-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+| Source Id | Global Id | Driver Type/Pin     | Constraint | Site            | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock                                                                               | Driver Pin                                                                                 | Net                                                                  |
++-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+| src0      | g2        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X0Y1 | X0Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/my_SDR_v1_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0                                         | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1_clk_wiz_1                      |
+| src0      | g0        | MMCME2_ADV/CLKOUT2  | None       | MMCME2_ADV_X0Y1 | X0Y1         |           1 |               0 |              20.000 | clk_out3_clk_wiz_1                                                                         | sdr/my_SDR_v1_clk_wiz_0/inst/mmcm_adv_inst/CLKOUT2                                         | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3_clk_wiz_1                      |
+| src0      | g16       | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X0Y1 | X0Y1         |           1 |               0 |              10.000 | clkfbout_clk_wiz_1                                                                         | sdr/my_SDR_v1_clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT                                        | sdr/my_SDR_v1_clk_wiz_0/inst/clkfbout_clk_wiz_1                      |
+| src1      | g1        | BSCANE2/TCK         | None       | BSCAN_X0Y0      | X0Y1         |           1 |               0 |              33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs |
+| src2      | g3        | LUT2/O              | None       | SLICE_X51Y96    | X0Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/top_mult_u1_i_2/O                                                                      | sdr/MOD_STATE_reg[3]_0                                               |
+| src3      | g4        | LUT2/O              | None       | SLICE_X52Y96    | X1Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/top_dds_u4_i_2/O                                                                       | sdr/MOD_STATE_reg[3]_3                                               |
+| src4      | g5        | LUT2/O              | None       | SLICE_X52Y96    | X1Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/dds_fix16_u3_i_2/O                                                                     | sdr/MOD_STATE_reg[2]_3                                               |
+| src5      | g6        | LUT2/O              | None       | SLICE_X51Y96    | X0Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/FM_fix16_xbip_multadd_0_u0_i_2/O                                                       | sdr/MOD_STATE_reg[2]_4                                               |
+| src6      | g7        | LUT2/O              | None       | SLICE_X52Y96    | X1Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/top_dds_u3_i_2/O                                                                       | sdr/MOD_STATE_reg[3]_2                                               |
+| src7      | g8        | LUT2/O              | None       | SLICE_X52Y96    | X1Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/top_dds_u6_i_2/O                                                                       | sdr/MOD_STATE_reg[2]_6                                               |
+| src8      | g9        | LUT2/O              | None       | SLICE_X52Y98    | X1Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/top_dds_u5_i_2/O                                                                       | sdr/MOD_STATE_reg[2]_5                                               |
+| src9      | g10       | LUT2/O              | None       | SLICE_X52Y96    | X1Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/top_dds_u2_i_2/O                                                                       | sdr/MOD_STATE_reg[3]_1                                               |
+| src10     | g11       | LUT2/O              | None       | SLICE_X52Y98    | X1Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/AM_sfix16_dds_sfix16_u0_i_2/O                                                          | sdr/MOD_STATE_reg[2]_1                                               |
+| src11     | g12       | LUT2/O              | None       | SLICE_X52Y96    | X1Y1         |           1 |               0 |               5.000 | clk_out1_clk_wiz_1                                                                         | sdr/top_dds_u0_i_2/O                                                                       | sdr/MOD_STATE_reg[2]_2                                               |
+| src12     | g13       | LUT2/O              | None       | SLICE_X52Y96    | X1Y1         |           1 |               0 |              20.000 | clk_out3_clk_wiz_1                                                                         | sdr/PDM_in[15]_i_2/O                                                                       | sdr/MOD_STATE_reg[2]_0                                               |
+| src13     | g14       | FDCE/Q              | None       | SLICE_X32Y73    | X0Y1         |           1 |               0 |                     |                                                                                            | sdr/digit_baseband_sclk_r2_reg/Q                                                           | sdr/digit_baseband_sclk_r2                                           |
+| src14     | g15       | BUFG/O              | None       | BUFGCTRL_X0Y1   | n/a          |        4680 |               1 |              20.000 | clk_out3_clk_wiz_1                                                                         | sdr/my_SDR_v1_clk_wiz_0/inst/clkout3_buf/O                                                 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3                                |
++-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+4. Local Clock Details
+----------------------
+
++----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------+--------------------+
+| Local Id | Driver Type/Pin | Constraint | Site/BEL          | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                  | Net                |
++----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------+--------------------||
+| 0        | FDRE/Q          | None       | SLICE_X79Y112/AFF | X1Y2         |        3205 |               1 |              |       | sdr/clk_div_u1/clkout_reg/Q | sdr/clk_div_u1/CLK - Static -
++----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------+--------------------||
+* Local Clocks in this context represents only clocks driven by non-global buffers
+** Clock Loads column represents the clock pin loads (pin count)
+*** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+5. Clock Regions: Key Resource Utilization
+------------------------------------------
+
++-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                   | Global Clock |     BUFRs    |    BUFMRs    |    BUFIOs    |     MMCM     |      PLL     |      GT      |      PCI     |    ILOGIC    |    OLOGIC    |      FF      |     LUTM     |    RAMB18    |    RAMB36    |    DSP48E2   |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| X0Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3436 |  2600 |  692 |   600 |    0 |    20 |    2 |    10 |    4 |    20 |
+| X1Y0              |    4 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 | 1326 |  1500 | 1079 |   550 |    0 |    40 |    4 |    20 |   21 |    40 |
+| X0Y1              |   10 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1740 |  2000 |  609 |   600 |    0 |    20 |    5 |    10 |    6 |    20 |
+| X1Y1              |    9 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    4 |    50 | 2619 |  1900 | 2146 |   650 |    0 |    60 |    5 |    30 |   26 |    40 |
+| X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    3 |  2000 |    9 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    1 |    50 |  512 |  1900 |  946 |   650 |    0 |    60 |    0 |    30 |   12 |    40 |
+| X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y3              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |  1350 |    0 |   500 |    0 |    30 |    0 |    15 |    0 |    40 |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+* Global Clock column represents track count; while other columns represents cell counts
+
+
+6. Clock Regions : Global Clock Summary
+---------------------------------------
+
+All Modules
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y3 |  0 |  0 |
+| Y2 |  0 |  1 |
+| Y1 | 10 |  9 |
+| Y0 |  2 |  4 |
++----+----+----+
+
+
+7. Device Cell Placement Summary for Global Clock g0
+----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+----------------+-------------+----------+----------------+----------+---------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                   |
++-----------+-----------------+-------------------+--------------------+-------------+----------------+-------------+----------+----------------+----------+---------------------------------------+
+| g0        | BUFG/O          | n/a               | clk_out3_clk_wiz_1 |      20.000 | {0.000 10.000} |        4476 |        0 |              1 |        0 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3 |
++-----------+-----------------+-------------------+--------------------+-------------+----------------+-------------+----------+----------------+----------+---------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-------+------+
+|    | X0    | X1   |
++----+-------+------+
+| Y3 |     0 |    0 |
+| Y2 |     0 |    0 |
+| Y1 |   350 |  416 |
+| Y0 |  2981 |  729 |
++----+-------+------+
+
+
+8. Device Cell Placement Summary for Global Clock g1
+----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                      | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                    |
++-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
+| g1        | BUFG/O          | n/a               | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK |      33.000 | {0.000 16.500} |         462 |        0 |              0 |        0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
++-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+----+
+|    | X0   | X1 |
++----+------+----+
+| Y3 |    0 |  0 |
+| Y2 |    0 |  0 |
+| Y1 |    0 |  0 |
+| Y0 |  462 |  0 |
++----+------+----+
+
+
+9. Device Cell Placement Summary for Global Clock g2
+----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                   |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------+
+| g2        | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         457 |        0 |              0 |        0 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1 |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+------+
+|    | X0   | X1   |
++----+------+------+
+| Y3 |    0 |    0 |
+| Y2 |    0 |   34 |
+| Y1 |  143 |   98 |
+| Y0 |    0 |  182 |
++----+------+------+
+
+
+10. Device Cell Placement Summary for Global Clock g3
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+--------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net    |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+--------+
+| g3        | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         302 |        0 |              0 |        0 | PM_clk |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+--------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+------+
+|    | X0 | X1   |
++----+----+------+
+| Y3 |  0 |    0 |
+| Y2 |  0 |    0 |
+| Y1 |  0 |  302 |
+| Y0 |  0 |    0 |
++----+----+------+
+
+
+11. Device Cell Placement Summary for Global Clock g4
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net      |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+| g4        | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         301 |        0 |              0 |        0 | BPSK_clk |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+------+
+|    | X0  | X1   |
++----+-----+------+
+| Y3 |   0 |    0 |
+| Y2 |   0 |    0 |
+| Y1 |  87 |  214 |
+| Y0 |   0 |    0 |
++----+-----+------+
+
+
+12. Device Cell Placement Summary for Global Clock g5
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net     |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------+
+| g5        | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         294 |        0 |              0 |        0 | SSB_clk |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+----+
+|    | X0   | X1 |
++----+------+----+
+| Y3 |    0 |  0 |
+| Y2 |    0 |  0 |
+| Y1 |  294 |  0 |
+| Y0 |    0 |  0 |
++----+------+----+
+
+
+13. Device Cell Placement Summary for Global Clock g6
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+--------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net    |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+--------+
+| g6        | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         270 |        0 |              0 |        0 | FM_clk |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+--------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+------+
+|    | X0   | X1   |
++----+------+------+
+| Y3 |    0 |    0 |
+| Y2 |    0 |    0 |
+| Y1 |  137 |  133 |
+| Y0 |    0 |    0 |
++----+------+------+
+
+
+14. Device Cell Placement Summary for Global Clock g7
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net      |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+| g7        | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         268 |        0 |              0 |        0 | BFSK_clk |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+------+
+|    | X0  | X1   |
++----+-----+------+
+| Y3 |   0 |    0 |
+| Y2 |   0 |    0 |
+| Y1 |  70 |  198 |
+| Y0 |   0 |    0 |
++----+-----+------+
+
+
+15. Device Cell Placement Summary for Global Clock g8
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net      |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+| g8        | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         239 |        0 |              0 |        0 | QPSK_clk |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+----+
+|    | X0   | X1 |
++----+------+----+
+| Y3 |    0 |  0 |
+| Y2 |    0 |  0 |
+| Y1 |  239 |  0 |
+| Y0 |    0 |  0 |
++----+------+----+
+
+
+16. Device Cell Placement Summary for Global Clock g9
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net      |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+| g9        | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         238 |        0 |              0 |        0 | DPSK_clk |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+----------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+----+
+|    | X0   | X1 |
++----+------+----+
+| Y3 |    0 |  0 |
+| Y2 |    0 |  0 |
+| Y1 |  238 |  0 |
+| Y0 |    0 |  0 |
++----+------+----+
+
+
+17. Device Cell Placement Summary for Global Clock g10
+------------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net     |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------+
+| g10       | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         227 |        0 |              0 |        0 | ASK_clk |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+------+
+|    | X0 | X1   |
++----+----+------+
+| Y3 |  0 |    0 |
+| Y2 |  0 |    0 |
+| Y1 |  0 |  227 |
+| Y0 |  0 |    0 |
++----+----+------+
+
+
+18. Device Cell Placement Summary for Global Clock g11
+------------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+--------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net    |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+--------+
+| g11       | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         215 |        0 |              0 |        0 | AM_clk |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+--------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+------+
+|    | X0 | X1   |
++----+----+------+
+| Y3 |  0 |    0 |
+| Y2 |  0 |    0 |
+| Y1 |  0 |  215 |
+| Y0 |  0 |    0 |
++----+----+------+
+
+
+19. Device Cell Placement Summary for Global Clock g12
+------------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net     |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------+
+| g12       | BUFG/O          | n/a               | clk_out1_clk_wiz_1 |       5.000 | {0.000 2.500} |         214 |        0 |              0 |        0 | DSB_clk |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+---------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+----+
+|    | X0   | X1 |
++----+------+----+
+| Y3 |    0 |  0 |
+| Y2 |    0 |  0 |
+| Y1 |  214 |  0 |
+| Y0 |    0 |  0 |
++----+------+----+
+
+
+20. Device Cell Placement Summary for Global Clock g13
+------------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+----------------+-------------+----------+----------------+----------+---------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net     |
++-----------+-----------------+-------------------+--------------------+-------------+----------------+-------------+----------+----------------+----------+---------+
+| g13       | BUFG/O          | n/a               | clk_out3_clk_wiz_1 |      20.000 | {0.000 10.000} |          82 |        0 |              0 |        0 | PDM_clk |
++-----------+-----------------+-------------------+--------------------+-------------+----------------+-------------+----------+----------------+----------+---------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+-----+
+|    | X0 | X1  |
++----+----+-----+
+| Y3 |  0 |   0 |
+| Y2 |  0 |   0 |
+| Y1 |  0 |   0 |
+| Y0 |  0 |  82 |
++----+----+-----+
+
+
+21. Device Cell Placement Summary for Global Clock g14
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                         |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------+
+| g14       | BUFG/O          | n/a               |       |             |               |          82 |        0 |              0 |        0 | digit_baseband_sclk_r2_BUFG |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+-----+
+|    | X0 | X1  |
++----+----+-----+
+| Y3 |  0 |   0 |
+| Y2 |  0 |   0 |
+| Y1 |  0 |  82 |
+| Y0 |  0 |   0 |
++----+----+-----+
+
+
+22. Device Cell Placement Summary for Global Clock g15
+------------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                     |
++-----------+-----------------+-------------------+--------------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------+
+| g15       | BUFGCTRL/O      | n/a               | clk_out3_clk_wiz_1 |      20.000 | {0.000 10.000} |           4 |        0 |              0 |        0 | bus_0/bram_0/clkb_muxed |
++-----------+-----------------+-------------------+--------------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y3 |  0 |  0 |
+| Y2 |  0 |  0 |
+| Y1 |  0 |  0 |
+| Y0 |  0 |  4 |
++----+----+----+
+
+
+23. Device Cell Placement Summary for Global Clock g16
+------------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                 |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------+
+| g16       | BUFG/O          | n/a               | clkfbout_clk_wiz_1 |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | sdr/my_SDR_v1_clk_wiz_0/inst/clkfbout_buf_clk_wiz_1 |
++-----------+-----------------+-------------------+--------------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y3 |  0 |  0 |
+| Y2 |  0 |  0 |
+| Y1 |  1 |  0 |
+| Y0 |  0 |  0 |
++----+----+----+
+
+
+24. Clock Region Cell Placement per Global Clock: Region X0Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                    |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        2981 |               0 | 2974 |      1 |    2 |   4 |  0 |    0 |   0 |       0 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3  |
+| g1        | n/a   | BUFG/O          | None       |         462 |               0 |  462 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+25. Clock Region Cell Placement per Global Clock: Region X1Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                   |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         729 |               0 | 715 |      1 |    4 |   8 |  0 |    0 |   0 |       0 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3 |
+| g2        | n/a   | BUFG/O          | None       |         182 |               0 | 172 |      6 |    0 |   4 |  0 |    0 |   0 |       0 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1 |
+| g13       | n/a   | BUFG/O          | None       |          82 |               0 |  82 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | PDM_clk                               |
+| g15       | n/a   | BUFGCTRL/O      | None       |           4 |               0 |   0 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | bus_0/bram_0/clkb_muxed               |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+26. Clock Region Cell Placement per Global Clock: Region X0Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         350 |               0 | 350 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3               |
+| g2        | n/a   | BUFG/O          | None       |         141 |               2 | 132 |      6 |    0 |   3 |  0 |    0 |   0 |       0 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1               |
+| g4        | n/a   | BUFG/O          | None       |          87 |               0 |  85 |      2 |    0 |   0 |  0 |    0 |   0 |       0 | BPSK_clk                                            |
+| g5        | n/a   | BUFG/O          | None       |         294 |               0 | 289 |      2 |    1 |   2 |  0 |    0 |   0 |       0 | SSB_clk                                             |
+| g6        | n/a   | BUFG/O          | None       |         137 |               0 | 134 |      2 |    1 |   0 |  0 |    0 |   0 |       0 | FM_clk                                              |
+| g7        | n/a   | BUFG/O          | None       |          70 |               0 |  68 |      2 |    0 |   0 |  0 |    0 |   0 |       0 | BFSK_clk                                            |
+| g8        | n/a   | BUFG/O          | None       |         239 |               0 | 236 |      2 |    1 |   0 |  0 |    0 |   0 |       0 | QPSK_clk                                            |
+| g9        | n/a   | BUFG/O          | None       |         238 |               0 | 235 |      2 |    1 |   0 |  0 |    0 |   0 |       0 | DPSK_clk                                            |
+| g12       | n/a   | BUFG/O          | None       |         214 |               0 | 211 |      1 |    1 |   1 |  0 |    0 |   0 |       0 | DSB_clk                                             |
+| g16       | n/a   | BUFG/O          | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | sdr/my_SDR_v1_clk_wiz_0/inst/clkfbout_buf_clk_wiz_1 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+27. Clock Region Cell Placement per Global Clock: Region X1Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                   |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         415 |               1 | 415 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3 |
+| g2        | n/a   | BUFG/O          | None       |          89 |               9 |  84 |      0 |    0 |   1 |  0 |    0 |   0 |       0 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1 |
+| g3        | n/a   | BUFG/O          | None       |         302 |               0 | 298 |      2 |    1 |   1 |  0 |    0 |   0 |       0 | PM_clk                                |
+| g4        | n/a   | BUFG/O          | None       |         214 |               0 | 213 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | BPSK_clk                              |
+| g6        | n/a   | BUFG/O          | None       |         133 |               0 | 132 |      0 |    0 |   1 |  0 |    0 |   0 |       0 | FM_clk                                |
+| g7        | n/a   | BUFG/O          | None       |         198 |               0 | 197 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | BFSK_clk                              |
+| g10       | n/a   | BUFG/O          | None       |         227 |               0 | 224 |      1 |    1 |   1 |  0 |    0 |   0 |       0 | ASK_clk                               |
+| g11       | n/a   | BUFG/O          | None       |         215 |               0 | 211 |      1 |    1 |   2 |  0 |    0 |   0 |       0 | AM_clk                                |
+| g14       | n/a   | BUFG/O          | None       |          82 |               0 |  82 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | digit_baseband_sclk_r2_BUFG           |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+28. Clock Region Cell Placement per Global Clock: Region X1Y2
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                   |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------+
+| g2        | n/a   | BUFG/O          | None       |          34 |               0 | 34 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1 |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+
+# Location of BUFG Primitives 
+set_property LOC BUFGCTRL_X0Y15 [get_cells sdr/my_SDR_v1_clk_wiz_0/inst/clkf_buf]
+set_property LOC BUFGCTRL_X0Y1 [get_cells sdr/my_SDR_v1_clk_wiz_0/inst/clkout3_buf]
+set_property LOC BUFGCTRL_X0Y0 [get_cells sdr/my_SDR_v1_clk_wiz_0/inst/clkout1_buf]
+set_property LOC BUFGCTRL_X0Y14 [get_cells digit_baseband_sclk_r2_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y3 [get_cells dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck]
+set_property LOC BUFGCTRL_X0Y2 [get_cells bus_0/bram_0/BUFGMUX_inst]
+set_property LOC BUFGCTRL_X0Y6 [get_cells dds_fix16_u3_i_1]
+set_property LOC BUFGCTRL_X0Y9 [get_cells top_dds_u6_i_1]
+set_property LOC BUFGCTRL_X0Y4 [get_cells top_mult_u1_i_1]
+set_property LOC BUFGCTRL_X0Y13 [get_cells PDM_in_reg[15]_i_1]
+set_property LOC BUFGCTRL_X0Y7 [get_cells FM_fix16_xbip_multadd_0_u0_i_1]
+set_property LOC BUFGCTRL_X0Y11 [get_cells top_dds_u0_i_1]
+set_property LOC BUFGCTRL_X0Y10 [get_cells top_dds_u5_i_1]
+set_property LOC BUFGCTRL_X0Y5 [get_cells top_dds_u4_i_1]
+set_property LOC BUFGCTRL_X0Y8 [get_cells top_dds_u3_i_1]
+set_property LOC BUFGCTRL_X0Y12 [get_cells top_dds_u2_i_1]
+set_property LOC BUFGCTRL_X0Y16 [get_cells AM_sfix16_dds_sfix16_u0_i_1]
+
+# Location of IO Primitives which is load of clock spine
+
+# Location of clock ports
+set_property LOC IOB_X0Y173 [get_ports gclk]
+
+# Clock net "sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3" driven by instance "sdr/my_SDR_v1_clk_wiz_0/inst/clkout3_buf" located at site "BUFGCTRL_X0Y1"
+#startgroup
+create_pblock {CLKAG_sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3}
+add_cells_to_pblock [get_pblocks  {CLKAG_sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=bus_0/bram_0/BUFGMUX_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3"}]]]
+resize_pblock [get_pblocks {CLKAG_sdr/my_SDR_v1_clk_wiz_0/inst/clk_out3}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1" driven by instance "sdr/my_SDR_v1_clk_wiz_0/inst/clkout1_buf" located at site "BUFGCTRL_X0Y0"
+#startgroup
+create_pblock {CLKAG_sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1}
+add_cells_to_pblock [get_pblocks  {CLKAG_sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1"}]]]
+resize_pblock [get_pblocks {CLKAG_sdr/my_SDR_v1_clk_wiz_0/inst/clk_out1}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+#endgroup
+
+# Clock net "digit_baseband_sclk_r2_BUFG" driven by instance "digit_baseband_sclk_r2_BUFG_inst" located at site "BUFGCTRL_X0Y14"
+#startgroup
+create_pblock {CLKAG_digit_baseband_sclk_r2_BUFG}
+add_cells_to_pblock [get_pblocks  {CLKAG_digit_baseband_sclk_r2_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="digit_baseband_sclk_r2_BUFG"}]]]
+resize_pblock [get_pblocks {CLKAG_digit_baseband_sclk_r2_BUFG}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i" driven by instance "dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck" located at site "BUFGCTRL_X0Y3"
+#startgroup
+create_pblock {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}
+add_cells_to_pblock [get_pblocks  {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i"}]]]
+resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "bus_0/bram_0/clkb_muxed" driven by instance "bus_0/bram_0/BUFGMUX_inst" located at site "BUFGCTRL_X0Y2"
+#startgroup
+create_pblock {CLKAG_bus_0/bram_0/clkb_muxed}
+add_cells_to_pblock [get_pblocks  {CLKAG_bus_0/bram_0/clkb_muxed}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="bus_0/bram_0/clkb_muxed"}]]]
+resize_pblock [get_pblocks {CLKAG_bus_0/bram_0/clkb_muxed}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "SSB_clk" driven by instance "dds_fix16_u3_i_1" located at site "BUFGCTRL_X0Y6"
+#startgroup
+create_pblock {CLKAG_SSB_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_SSB_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SSB_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_SSB_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "QPSK_clk" driven by instance "top_dds_u6_i_1" located at site "BUFGCTRL_X0Y9"
+#startgroup
+create_pblock {CLKAG_QPSK_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_QPSK_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="QPSK_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_QPSK_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "PM_clk" driven by instance "top_mult_u1_i_1" located at site "BUFGCTRL_X0Y4"
+#startgroup
+create_pblock {CLKAG_PM_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_PM_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PM_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_PM_clk}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "PDM_clk" driven by instance "PDM_in_reg[15]_i_1" located at site "BUFGCTRL_X0Y13"
+#startgroup
+create_pblock {CLKAG_PDM_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_PDM_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PDM_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_PDM_clk}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "FM_clk" driven by instance "FM_fix16_xbip_multadd_0_u0_i_1" located at site "BUFGCTRL_X0Y7"
+#startgroup
+create_pblock {CLKAG_FM_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_FM_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="FM_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_FM_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "DSB_clk" driven by instance "top_dds_u0_i_1" located at site "BUFGCTRL_X0Y11"
+#startgroup
+create_pblock {CLKAG_DSB_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_DSB_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="DSB_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_DSB_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "DPSK_clk" driven by instance "top_dds_u5_i_1" located at site "BUFGCTRL_X0Y10"
+#startgroup
+create_pblock {CLKAG_DPSK_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_DPSK_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="DPSK_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_DPSK_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "BPSK_clk" driven by instance "top_dds_u4_i_1" located at site "BUFGCTRL_X0Y5"
+#startgroup
+create_pblock {CLKAG_BPSK_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_BPSK_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="BPSK_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_BPSK_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "BFSK_clk" driven by instance "top_dds_u3_i_1" located at site "BUFGCTRL_X0Y8"
+#startgroup
+create_pblock {CLKAG_BFSK_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_BFSK_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="BFSK_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_BFSK_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "ASK_clk" driven by instance "top_dds_u2_i_1" located at site "BUFGCTRL_X0Y12"
+#startgroup
+create_pblock {CLKAG_ASK_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_ASK_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ASK_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_ASK_clk}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "AM_clk" driven by instance "AM_sfix16_dds_sfix16_u0_i_1" located at site "BUFGCTRL_X0Y16"
+#startgroup
+create_pblock {CLKAG_AM_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_AM_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="AM_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_AM_clk}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup

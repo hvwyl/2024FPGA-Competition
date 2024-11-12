@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/ip/mult_sfix16/sim/mult_sfix16.vhd" \
+
+nosort
