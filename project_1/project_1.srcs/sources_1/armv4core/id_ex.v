@@ -20,7 +20,6 @@ module id_ex (
     input [3:0]         i_wb_rd_code,
     input               i_nzcv_flag,
     input               i_mul_vld,
-    input               i_mul_lmode,
     input               i_swp_vld,
     input               i_ldm_vld,
     input               i_mrs_vld,
@@ -43,7 +42,6 @@ module id_ex (
     output reg [3:0]    o_wb_rd_code,
     output reg          o_nzcv_flag,
     output reg          o_mul_vld,
-    output reg          o_mul_lmode,
     output reg          o_swp_vld,
     output reg          o_ldm_vld,
     output reg          o_mrs_vld,
@@ -69,7 +67,6 @@ module id_ex (
             o_wb_rd_code    <= 'b0;
             o_nzcv_flag     <= 'b0;
             o_mul_vld       <= 'b0;
-            o_mul_lmode     <= 'b0;
             o_swp_vld       <= 'b0;
             o_ldm_vld       <= 'b0;
             o_mrs_vld       <= 'b0;
@@ -93,7 +90,6 @@ module id_ex (
             o_wb_rd_code    <= i_wb_rd_code    ;
             o_nzcv_flag     <= i_nzcv_flag     ;
             o_mul_vld       <= i_mul_vld       ;
-            o_mul_lmode     <= i_mul_lmode     ;
             o_swp_vld       <= i_swp_vld       ;
             o_ldm_vld       <= i_ldm_vld       ;
             o_mrs_vld       <= i_mrs_vld       ;

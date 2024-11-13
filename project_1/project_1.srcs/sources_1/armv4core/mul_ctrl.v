@@ -5,9 +5,9 @@ module mul_ctrl (
 
     /* from ID phase */
     input               i_vld,
-    input [2:0]         i_opcode,
 
     /* from EX phase */
+    input [2:0]         i_opcode,
     input [31:0]        i_op1,
     input [31:0]        i_op2,
     input [31:0]        i_acc_lo,
@@ -30,15 +30,9 @@ module mul_ctrl (
     localparam MULL = 1;
     assign o_result_vld = (state==IDLE);
 
-    reg [3:0] opcode;
-
-    wire [31:0] op1;
-    wire [31:0] op2;
     reg [63:0] acc;
-    assign op1 = i_op1;
-    assign op2 = i_op2;
     always @(*) begin
-        case (opcode)
+        case (i_opcode)
             // `MUL_MUL, `MUL_UMULL, `MUL_SMULL:
             default:
                 acc <= 'b0;
@@ -56,15 +50,15 @@ module mul_ctrl (
         .rst_n      (rst_n),
         .i_vld      (mul_ctrl_vld&en),
         .i_sign     (mul_sign),
-        .i_op1      (op1),
-        .i_op2      (op2),
+        .i_op1      (i_op1),
+        .i_op2      (i_op2),
         .i_acc      (acc),
         .o_vld      (mul_result_vld),
         .o_result   ({o_result_hi, o_result_lo})
     );
 
     always @(*) begin
-        case (opcode)
+        case (i_opcode)
             // `MUL_MUL, `MUL_MLA, `MUL_UMULL, `MUL_UMLAL:
             default:
                 mul_sign <= 'b0;
@@ -77,7 +71,6 @@ module mul_ctrl (
         if (!rst_n) begin
             state <= IDLE;
             mul_ctrl_vld <= 'b0;
-            opcode <= 'b0;
         end
         else if (en) begin
             case (state)
@@ -91,7 +84,6 @@ module mul_ctrl (
                         state <= IDLE;
                         mul_ctrl_vld <= 'b0;
                     end
-                    opcode <= i_opcode;
                 end
                 MULL: if (mul_ctrl_vld) begin
                     state <= MULL;

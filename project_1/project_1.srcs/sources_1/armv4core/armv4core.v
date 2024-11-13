@@ -77,7 +77,6 @@ module armv4core (
     wire [3:0]      id_wb_rd_code           ;
     wire            id_nzcv_flag            ;
     wire            id_mul_vld              ;
-    wire [2:0]      id_mul_code             ;
     wire            id_swp_vld              ;
     wire            id_ldm_vld              ;
     wire            id_mrs_vld              ;
@@ -105,7 +104,6 @@ module armv4core (
     wire [3:0]      ex_wb_rd_code           ;
     wire            ex_nzcv_flag            ;
     wire            ex_mul_vld              ;
-    wire            ex_mul_lmode            ;
     wire            ex_swp_vld              ;
     wire            ex_ldm_vld              ;
     wire            ex_mrs_vld              ;
@@ -285,8 +283,8 @@ module armv4core (
         .en                 (en                                         ),
 
         .i_vld              (id_mul_vld                                 ),
-        .i_opcode           (id_mul_code                                ),
 
+        .i_opcode           (ex_opcode[2:0]                             ),
         .i_op1              (ex_op2                                     ),
         .i_op2              (ex_op3                                     ),
         .i_acc_lo           (ex_op1                                     ),
@@ -344,7 +342,6 @@ module armv4core (
         .o_wb_rd_code       (id_wb_rd_code                              ),
         .o_nzcv_flag        (id_nzcv_flag                               ),
         .o_mul_vld          (id_mul_vld                                 ),
-        .o_mul_opcode       (id_mul_code                                ),
         .o_swp_vld          (id_swp_vld                                 ),
         .o_ldm_vld          (id_ldm_vld                                 ),
         .o_mrs_vld          (id_mrs_vld                                 ),
@@ -378,7 +375,6 @@ module armv4core (
         .i_wb_rd_code       (id_wb_rd_code                              ),
         .i_nzcv_flag        (id_nzcv_flag                               ),
         .i_mul_vld          (id_mul_vld                                 ),
-        .i_mul_lmode        (id_mul_code[2]                             ),
         .i_swp_vld          (id_swp_vld                                 ),
         .i_ldm_vld          (id_ldm_vld                                 ),
         .i_mrs_vld          (id_mrs_vld                                 ),
@@ -401,7 +397,6 @@ module armv4core (
         .o_wb_rd_code       (ex_wb_rd_code                              ),
         .o_nzcv_flag        (ex_nzcv_flag                               ),
         .o_mul_vld          (ex_mul_vld                                 ),
-        .o_mul_lmode        (ex_mul_lmode                               ),
         .o_swp_vld          (ex_swp_vld                                 ),
         .o_ldm_vld          (ex_ldm_vld                                 ),
         .o_mrs_vld          (ex_mrs_vld                                 ),
@@ -481,7 +476,7 @@ module armv4core (
         .i_ldm_reg          (re_reg_forwarded                           ),
 
         .i_mul_vld          (ex_mul_vld                                 ),
-        .i_mul_lmode        (ex_mul_lmode                               ),
+        .i_mul_lmode        (ex_opcode[2]                               ),
 
         .i_swp_vld          (ex_swp_vld                                 ),
         .i_ldm_vld          (ex_ldm_vld                                 ),

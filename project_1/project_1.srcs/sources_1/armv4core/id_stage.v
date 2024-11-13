@@ -41,10 +41,9 @@ module id_stage (
     output reg          o_wb_rd_vld,
     output reg [3:0]    o_wb_rd_code,
     output reg          o_nzcv_flag,
-
+    
     /* multiplier control signals */
     output              o_mul_vld,
-    output [2:0]        o_mul_opcode,
 
     /* high-priority function control signals */
     output reg          o_swp_vld,      // SWP instruction
@@ -504,7 +503,6 @@ module id_stage (
 
     /* multiplier control signals */
     assign o_mul_vld = cond_vld && (is_mul||is_mull);
-    assign o_mul_opcode = i_inst[23:21];
     
     /* high-priority function control signals */
     always @(*) begin
